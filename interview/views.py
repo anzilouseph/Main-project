@@ -81,18 +81,6 @@ def add_veccancy(request):
 
     return HttpResponse('''<script>alert("added sucessfully");window.location="/Manage_job_veccancy"</script>''')
 
-#
-#
-# def add_vacancy(request):
-#     if request.method == 'POST':
-#         form = VacancyForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             return redirect('success')  # You can define a success URL
-#     else:
-#         form = VacancyForm()
-#
-#     return render(request, 'company/add_vacancy.html', {'form': form})
 
 def chat_with_candidate(request):
     return render(request,'company/chat with candidate.html')
