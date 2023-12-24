@@ -1,0 +1,51 @@
+<form action="" method="get"></form><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form name="form1" method="post" action="company_search">
+  <div align="center">
+    <table width="512" height="182" border="1">
+        <tr>
+        <td colspan="7">Company Name
+          <label>
+          <input type="text" name="textfield" />
+          <input type="submit" name="&#55357;&#56590; " value="search " />
+        </label></td>
+      </tr>
+
+      <tr>
+        <td width="101">Company name  </td>
+        <td width="51">Place</td>
+        <td width="46">Phone</td>
+        <td width="53">Email</td>
+        <td width="85">Website</td>
+        <td width="136">&nbsp;</td>
+      </tr>
+         {% for i in val %}
+      <tr>
+        <td>{{i.name}}</td>
+        <td>{{i.place}}</td>
+        <td>&nbsp;{{i.phone}}</td>
+        <td>{{i.Email}}</td>
+        <td>{{i.Wedsite}}</td>
+          <td>
+              {% if i.LOGIN.type == 'pending' %}
+      <p><a href="accept/{{i.LOGIN.id }}">Accept</a></p>
+      <p><a href="reject/{{i.LOGIN.id }}">Reject</a></p>
+         {% elif i.LOGIN.type == 'company' %}
+             Accepted
+      {% else %}
+            Rejected
+      {% endif %}
+      </td>
+      </tr>
+         {% endfor %}
+      </table>
+  </div>
+</form>
+</body>
+</html>

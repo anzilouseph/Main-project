@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <div align="center">
+    <table width="377" border="1">
+      <tr>
+        <td width="45">name </td>
+        <td width="51">Address</td>
+        <td width="38">Phone</td>
+        <td width="33">Email</td>
+        <td width="55">&nbsp;</td>
+      </tr>
+        {% for i in val %}
+      <tr>
+        <td>&nbsp;{{ i.first_name}}{{ i.Last_name}}</td>
+        <td>&nbsp;{{ i.Address}}</td>
+        <td>&nbsp;{{ i.Phone}}</td>
+        <td>{{ i.Email}}</td>
+
+        <td>
+             {% if i.LOGIN.type == 'block' %}
+                    <p><a href="unblock_guide/{{i.LOGIN.id }}">Unblock</a></p>
+                    {% else %}
+                    <p><a href="block_guide/{{i.LOGIN.id }}">Block</a></p>
+                    {% endif %}
+      </tr>
+         {% endfor %}
+      </table>
+  </div>
+</form>
+</body>
+</html>

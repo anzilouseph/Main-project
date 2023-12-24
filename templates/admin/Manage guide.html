@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="/manageguidesearch">
+  <div align="center">
+    <table width="374" border="1">
+      <tr>
+        <td colspan="7">Name
+          <label>
+          <input type="text" name="textfield" />
+          <input type="submit" name="&#55357;&#56590; " value="search " />
+        </label></td>
+      </tr>
+      <tr>
+        <td>name</td>
+        <td>Address</td>
+        <td>phone</td>
+        <td>Email</td>
+      </tr>
+        {% for i in val %}
+      <tr>
+        <td>{{ i.First_name }}{{ i.Last_name}}</td>
+        <td>{{ i.Address}}</td>
+        <td>{{ i.Phone}}</td>
+        <td>{{ i.Email}}</td>
+        <td><p><a href="edit_guide/{{ i.id }}">Edit</a></p>
+        <p><a href="delete_guide/{{ i.LOGIN.id }}">Delete</a></p></td>
+      </tr>
+        {% endfor %}
+      <tr>
+        <td colspan="7"><label>
+          <div align="center">
+            <a href="/add_guide">add new</a>
+            </div>
+        </label></td>
+      </tr>
+      </table>
+  </div>
+</form>
+</body>
+</html>

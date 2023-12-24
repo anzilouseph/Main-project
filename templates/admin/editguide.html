@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+<body>
+<form id="form1" name="form1" method="post" action="/edit_guide_post">
+<table width="355" border="1">
+  <tr>
+    <td width="95">First name </td>
+    <td width="244">
+
+      <label>
+        <input type="text" name="textfield" value="{{ val.First_name }}"/>
+        </label>
+    </td>
+  </tr>
+  <tr>
+    <td>Last name </td>
+    <td>
+      <label>
+        <input type="text" name="textfield2" value="{{ val.Last_name }}"/>
+        </label>
+      </td>
+  </tr>
+  <tr>
+    <td>Address</td>
+    <td>
+      <label>
+        <textarea name="textarea"> {{ val.Address }}</textarea>
+        </label>
+      </td>
+  </tr>
+  <tr>
+    <td>Phone</td>
+    <td>
+      <label>
+        <input type="text" name="textfield3" value="{{ val.Phone }}"/>
+        </label>
+      </td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td>
+      <label>
+        <input type="text" name="textfield4"value="{{ val.Email }}"/>
+        </label>
+      </td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+      <label>
+      <div align="center">
+        <input type="submit" name="Submit" value="update" />
+      </div>
+      </label>
+      </td>
+  </tr>
+</table>
+</form>
+</body>
+</html>
