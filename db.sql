@@ -58,7 +58,7 @@ CREATE TABLE `auth_permission` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `auth_permission_content_type_id_codename_01ab375a_uniq` (`content_type_id`,`codename`),
   CONSTRAINT `auth_permission_content_type_id_2f476e4b_fk_django_co` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=97 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `auth_permission` */
 
@@ -87,70 +87,70 @@ insert  into `auth_permission`(`id`,`name`,`content_type_id`,`codename`) values
 (22,'Can change session',6,'change_session'),
 (23,'Can delete session',6,'delete_session'),
 (24,'Can view session',6,'view_session'),
-(25,'Can add chat',7,'add_chat'),
-(26,'Can change chat',7,'change_chat'),
-(27,'Can delete chat',7,'delete_chat'),
-(28,'Can view chat',7,'view_chat'),
-(29,'Can add company',8,'add_company'),
-(30,'Can change company',8,'change_company'),
-(31,'Can delete company',8,'delete_company'),
-(32,'Can view company',8,'view_company'),
-(33,'Can add guide',9,'add_guide'),
-(34,'Can change guide',9,'change_guide'),
-(35,'Can delete guide',9,'delete_guide'),
-(36,'Can view guide',9,'view_guide'),
-(37,'Can add login',10,'add_login'),
-(38,'Can change login',10,'change_login'),
-(39,'Can delete login',10,'delete_login'),
-(40,'Can view login',10,'view_login'),
-(41,'Can add questions',11,'add_questions'),
-(42,'Can change questions',11,'change_questions'),
-(43,'Can delete questions',11,'delete_questions'),
-(44,'Can view questions',11,'view_questions'),
-(45,'Can add vaccancy',12,'add_vaccancy'),
-(46,'Can change vaccancy',12,'change_vaccancy'),
-(47,'Can delete vaccancy',12,'delete_vaccancy'),
-(48,'Can view vaccancy',12,'view_vaccancy'),
-(49,'Can add vac_qn',13,'add_vac_qn'),
-(50,'Can change vac_qn',13,'change_vac_qn'),
-(51,'Can delete vac_qn',13,'delete_vac_qn'),
-(52,'Can view vac_qn',13,'view_vac_qn'),
-(53,'Can add user',14,'add_user'),
-(54,'Can change user',14,'change_user'),
-(55,'Can delete user',14,'delete_user'),
-(56,'Can view user',14,'view_user'),
-(57,'Can add upload',15,'add_upload'),
-(58,'Can change upload',15,'change_upload'),
-(59,'Can delete upload',15,'delete_upload'),
-(60,'Can view upload',15,'view_upload'),
-(61,'Can add tip',16,'add_tip'),
-(62,'Can change tip',16,'change_tip'),
-(63,'Can delete tip',16,'delete_tip'),
-(64,'Can view tip',16,'view_tip'),
-(65,'Can add test_result',17,'add_test_result'),
-(66,'Can change test_result',17,'change_test_result'),
-(67,'Can delete test_result',17,'delete_test_result'),
-(68,'Can view test_result',17,'view_test_result'),
-(69,'Can add test',18,'add_test'),
-(70,'Can change test',18,'change_test'),
-(71,'Can delete test',18,'delete_test'),
-(72,'Can view test',18,'view_test'),
-(73,'Can add review',19,'add_review'),
-(74,'Can change review',19,'change_review'),
-(75,'Can delete review',19,'delete_review'),
-(76,'Can view review',19,'view_review'),
-(77,'Can add guideline',20,'add_guideline'),
-(78,'Can change guideline',20,'change_guideline'),
-(79,'Can delete guideline',20,'delete_guideline'),
-(80,'Can view guideline',20,'view_guideline'),
-(81,'Can add doubt',21,'add_doubt'),
-(82,'Can change doubt',21,'change_doubt'),
-(83,'Can delete doubt',21,'delete_doubt'),
-(84,'Can view doubt',21,'view_doubt'),
-(85,'Can add complaint',22,'add_complaint'),
-(86,'Can change complaint',22,'change_complaint'),
-(87,'Can delete complaint',22,'delete_complaint'),
-(88,'Can view complaint',22,'view_complaint'),
+(25,'Can add company',7,'add_company'),
+(26,'Can change company',7,'change_company'),
+(27,'Can delete company',7,'delete_company'),
+(28,'Can view company',7,'view_company'),
+(29,'Can add guide',8,'add_guide'),
+(30,'Can change guide',8,'change_guide'),
+(31,'Can delete guide',8,'delete_guide'),
+(32,'Can view guide',8,'view_guide'),
+(33,'Can add login',9,'add_login'),
+(34,'Can change login',9,'change_login'),
+(35,'Can delete login',9,'delete_login'),
+(36,'Can view login',9,'view_login'),
+(37,'Can add questions',10,'add_questions'),
+(38,'Can change questions',10,'change_questions'),
+(39,'Can delete questions',10,'delete_questions'),
+(40,'Can view questions',10,'view_questions'),
+(41,'Can add vaccancy',11,'add_vaccancy'),
+(42,'Can change vaccancy',11,'change_vaccancy'),
+(43,'Can delete vaccancy',11,'delete_vaccancy'),
+(44,'Can view vaccancy',11,'view_vaccancy'),
+(45,'Can add vac_qn',12,'add_vac_qn'),
+(46,'Can change vac_qn',12,'change_vac_qn'),
+(47,'Can delete vac_qn',12,'delete_vac_qn'),
+(48,'Can view vac_qn',12,'view_vac_qn'),
+(49,'Can add user',13,'add_user'),
+(50,'Can change user',13,'change_user'),
+(51,'Can delete user',13,'delete_user'),
+(52,'Can view user',13,'view_user'),
+(53,'Can add upload',14,'add_upload'),
+(54,'Can change upload',14,'change_upload'),
+(55,'Can delete upload',14,'delete_upload'),
+(56,'Can view upload',14,'view_upload'),
+(57,'Can add tip',15,'add_tip'),
+(58,'Can change tip',15,'change_tip'),
+(59,'Can delete tip',15,'delete_tip'),
+(60,'Can view tip',15,'view_tip'),
+(61,'Can add test_result',16,'add_test_result'),
+(62,'Can change test_result',16,'change_test_result'),
+(63,'Can delete test_result',16,'delete_test_result'),
+(64,'Can view test_result',16,'view_test_result'),
+(65,'Can add test',17,'add_test'),
+(66,'Can change test',17,'change_test'),
+(67,'Can delete test',17,'delete_test'),
+(68,'Can view test',17,'view_test'),
+(69,'Can add review',18,'add_review'),
+(70,'Can change review',18,'change_review'),
+(71,'Can delete review',18,'delete_review'),
+(72,'Can view review',18,'view_review'),
+(73,'Can add guideline',19,'add_guideline'),
+(74,'Can change guideline',19,'change_guideline'),
+(75,'Can delete guideline',19,'delete_guideline'),
+(76,'Can view guideline',19,'view_guideline'),
+(77,'Can add doubt',20,'add_doubt'),
+(78,'Can change doubt',20,'change_doubt'),
+(79,'Can delete doubt',20,'delete_doubt'),
+(80,'Can view doubt',20,'view_doubt'),
+(81,'Can add complaint_table',21,'add_complaint_table'),
+(82,'Can change complaint_table',21,'change_complaint_table'),
+(83,'Can delete complaint_table',21,'delete_complaint_table'),
+(84,'Can view complaint_table',21,'view_complaint_table'),
+(85,'Can add chat',22,'add_chat'),
+(86,'Can change chat',22,'change_chat'),
+(87,'Can delete chat',22,'delete_chat'),
+(88,'Can view chat',22,'view_chat'),
 (89,'Can add app_req',23,'add_app_req'),
 (90,'Can change app_req',23,'change_app_req'),
 (91,'Can delete app_req',23,'delete_app_req'),
@@ -158,11 +158,7 @@ insert  into `auth_permission`(`id`,`name`,`content_type_id`,`codename`) values
 (93,'Can add answer_details',24,'add_answer_details'),
 (94,'Can change answer_details',24,'change_answer_details'),
 (95,'Can delete answer_details',24,'delete_answer_details'),
-(96,'Can view answer_details',24,'view_answer_details'),
-(97,'Can add complaint_table',22,'add_complaint_table'),
-(98,'Can change complaint_table',22,'change_complaint_table'),
-(99,'Can delete complaint_table',22,'delete_complaint_table'),
-(100,'Can view complaint_table',22,'view_complaint_table');
+(96,'Can view answer_details',24,'view_answer_details');
 
 /*Table structure for table `auth_user` */
 
@@ -265,22 +261,22 @@ insert  into `django_content_type`(`id`,`app_label`,`model`) values
 (5,'contenttypes','contenttype'),
 (24,'interview','answer_details'),
 (23,'interview','app_req'),
-(7,'interview','chat'),
-(8,'interview','company'),
-(22,'interview','complaint_table'),
-(21,'interview','doubt'),
-(9,'interview','guide'),
-(20,'interview','guideline'),
-(10,'interview','login'),
-(11,'interview','questions'),
-(19,'interview','review'),
-(18,'interview','test'),
-(17,'interview','test_result'),
-(16,'interview','tip'),
-(15,'interview','upload'),
-(14,'interview','user'),
-(13,'interview','vac_qn'),
-(12,'interview','vaccancy'),
+(22,'interview','chat'),
+(7,'interview','company'),
+(21,'interview','complaint_table'),
+(20,'interview','doubt'),
+(8,'interview','guide'),
+(19,'interview','guideline'),
+(9,'interview','login'),
+(10,'interview','questions'),
+(18,'interview','review'),
+(17,'interview','test'),
+(16,'interview','test_result'),
+(15,'interview','tip'),
+(14,'interview','upload'),
+(13,'interview','user'),
+(12,'interview','vac_qn'),
+(11,'interview','vaccancy'),
 (6,'sessions','session');
 
 /*Table structure for table `django_migrations` */
@@ -298,26 +294,26 @@ CREATE TABLE `django_migrations` (
 /*Data for the table `django_migrations` */
 
 insert  into `django_migrations`(`id`,`app`,`name`,`applied`) values 
-(1,'contenttypes','0001_initial','2023-12-01 07:21:49.228766'),
-(2,'auth','0001_initial','2023-12-01 07:21:49.525699'),
-(3,'admin','0001_initial','2023-12-01 07:21:49.588103'),
-(4,'admin','0002_logentry_remove_auto_add','2023-12-01 07:21:49.588103'),
-(5,'admin','0003_logentry_add_action_flag_choices','2023-12-01 07:21:49.603783'),
-(6,'contenttypes','0002_remove_content_type_name','2023-12-01 07:21:49.650694'),
-(7,'auth','0002_alter_permission_name_max_length','2023-12-01 07:21:49.681833'),
-(8,'auth','0003_alter_user_email_max_length','2023-12-01 07:21:49.713188'),
-(9,'auth','0004_alter_user_username_opts','2023-12-01 07:21:49.713188'),
-(10,'auth','0005_alter_user_last_login_null','2023-12-01 07:21:49.744464'),
-(11,'auth','0006_require_contenttypes_0002','2023-12-01 07:21:49.744464'),
-(12,'auth','0007_alter_validators_add_error_messages','2023-12-01 07:21:49.760033'),
-(13,'auth','0008_alter_user_username_max_length','2023-12-01 07:21:49.791241'),
-(14,'auth','0009_alter_user_last_name_max_length','2023-12-01 07:21:49.822497'),
-(15,'auth','0010_alter_group_name_max_length','2023-12-01 07:21:49.838107'),
-(16,'auth','0011_update_proxy_permissions','2023-12-01 07:21:49.838107'),
-(17,'auth','0012_alter_user_first_name_max_length','2023-12-01 07:21:49.885036'),
-(18,'interview','0001_initial','2023-12-01 07:21:50.697548'),
-(19,'sessions','0001_initial','2023-12-01 07:21:50.713164'),
-(20,'interview','0002_rename_complaint_complaint_table','2023-12-12 06:57:05.507875');
+(1,'contenttypes','0001_initial','2023-12-29 06:57:08.203819'),
+(2,'auth','0001_initial','2023-12-29 06:57:08.755049'),
+(3,'admin','0001_initial','2023-12-29 06:57:08.886358'),
+(4,'admin','0002_logentry_remove_auto_add','2023-12-29 06:57:08.888626'),
+(5,'admin','0003_logentry_add_action_flag_choices','2023-12-29 06:57:08.888626'),
+(6,'contenttypes','0002_remove_content_type_name','2023-12-29 06:57:09.008186'),
+(7,'auth','0002_alter_permission_name_max_length','2023-12-29 06:57:09.048055'),
+(8,'auth','0003_alter_user_email_max_length','2023-12-29 06:57:09.061486'),
+(9,'auth','0004_alter_user_username_opts','2023-12-29 06:57:09.061486'),
+(10,'auth','0005_alter_user_last_login_null','2023-12-29 06:57:09.130451'),
+(11,'auth','0006_require_contenttypes_0002','2023-12-29 06:57:09.139095'),
+(12,'auth','0007_alter_validators_add_error_messages','2023-12-29 06:57:09.141071'),
+(13,'auth','0008_alter_user_username_max_length','2023-12-29 06:57:09.193998'),
+(14,'auth','0009_alter_user_last_name_max_length','2023-12-29 06:57:09.251402'),
+(15,'auth','0010_alter_group_name_max_length','2023-12-29 06:57:09.267604'),
+(16,'auth','0011_update_proxy_permissions','2023-12-29 06:57:09.267604'),
+(17,'auth','0012_alter_user_first_name_max_length','2023-12-29 06:57:09.315533'),
+(18,'interview','0001_initial','2023-12-29 06:57:10.665389'),
+(19,'sessions','0001_initial','2023-12-29 06:57:10.699478'),
+(20,'interview','0002_auto_20240110_1302','2024-01-10 07:32:25.761921');
 
 /*Table structure for table `django_session` */
 
@@ -334,7 +330,7 @@ CREATE TABLE `django_session` (
 /*Data for the table `django_session` */
 
 insert  into `django_session`(`session_key`,`session_data`,`expire_date`) values 
-('q1jcwj8zue7459xxn0xx0t4imzrfqcqr','eyJnaWQiOjQsImNpZCI6NDU2fQ:1rCwzb:cRcBMN9RQoJIWQkcEkP4MiHyzFgJFQNS05mA4n5iwHA','2023-12-26 07:15:47.536017');
+('3z63rf0alw71sz8xgetbalblwqfuz49y','eyJsaWQiOjQsImdpZCI6MywiY2lkIjoxfQ:1rQ1Pq:GdcnEDQmkSsh_Xqj4yGqTlIMidCfJs6MdcduWr0TB40','2024-01-31 08:36:54.613382');
 
 /*Table structure for table `interview_answer_details` */
 
@@ -372,9 +368,12 @@ CREATE TABLE `interview_app_req` (
   KEY `interview_app_req_vaccancy_id_00516e4e_fk_interview_vaccancy_id` (`vaccancy_id`),
   CONSTRAINT `interview_app_req_USER_id_58416952_fk_interview_user_id` FOREIGN KEY (`USER_id`) REFERENCES `interview_user` (`id`),
   CONSTRAINT `interview_app_req_vaccancy_id_00516e4e_fk_interview_vaccancy_id` FOREIGN KEY (`vaccancy_id`) REFERENCES `interview_vaccancy` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `interview_app_req` */
+
+insert  into `interview_app_req`(`id`,`date`,`status`,`USER_id`,`vaccancy_id`) values 
+(1,'2024-01-10','fghjk',1,1);
 
 /*Table structure for table `interview_chat` */
 
@@ -382,15 +381,22 @@ DROP TABLE IF EXISTS `interview_chat`;
 
 CREATE TABLE `interview_chat` (
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `from_id` varchar(60) NOT NULL,
-  `To_id` varchar(60) NOT NULL,
-  `date` varchar(60) NOT NULL,
-  `message` varchar(60) NOT NULL,
-  `time` time(6) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `date` date NOT NULL,
+  `message` varchar(1000) NOT NULL,
+  `fromid_id` bigint NOT NULL,
+  `toid_id` bigint NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `interview_chat_fromid_id_bbae6827_fk_interview_login_id` (`fromid_id`),
+  KEY `interview_chat_toid_id_06203e8b_fk_interview_login_id` (`toid_id`),
+  CONSTRAINT `interview_chat_fromid_id_bbae6827_fk_interview_login_id` FOREIGN KEY (`fromid_id`) REFERENCES `interview_login` (`id`),
+  CONSTRAINT `interview_chat_toid_id_06203e8b_fk_interview_login_id` FOREIGN KEY (`toid_id`) REFERENCES `interview_login` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `interview_chat` */
+
+insert  into `interview_chat`(`id`,`date`,`message`,`fromid_id`,`toid_id`) values 
+(1,'2023-12-29','hi',2,3),
+(2,'2023-12-29','hlo',3,2);
 
 /*Table structure for table `interview_company` */
 
@@ -407,13 +413,13 @@ CREATE TABLE `interview_company` (
   PRIMARY KEY (`id`),
   KEY `interview_company_LOGIN_id_5635ef6c_fk_interview_login_id` (`LOGIN_id`),
   CONSTRAINT `interview_company_LOGIN_id_5635ef6c_fk_interview_login_id` FOREIGN KEY (`LOGIN_id`) REFERENCES `interview_login` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `interview_company` */
 
 insert  into `interview_company`(`id`,`name`,`place`,`phone`,`Email`,`Wedsite`,`LOGIN_id`) values 
-(27,'Abhishek ','cvb',987654321,'fgh','ikj',27),
-(29,'ayana','vhh',1234567890,'nnh','fytg',29);
+(1,'infosys','Ekm',987654343213,'infosys@gmail.com','www.infosys.com',2),
+(2,'amal','calicut',787899099,'amal@gmail.com','',9);
 
 /*Table structure for table `interview_complaint_table` */
 
@@ -426,16 +432,14 @@ CREATE TABLE `interview_complaint_table` (
   `Reply` varchar(60) NOT NULL,
   `USER_id` bigint NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `interview_complaint_USER_id_2715c937_fk_interview_user_id` (`USER_id`),
-  CONSTRAINT `interview_complaint_USER_id_2715c937_fk_interview_user_id` FOREIGN KEY (`USER_id`) REFERENCES `interview_user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=457 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `interview_complaint_table_USER_id_4abac489_fk_interview_user_id` (`USER_id`),
+  CONSTRAINT `interview_complaint_table_USER_id_4abac489_fk_interview_user_id` FOREIGN KEY (`USER_id`) REFERENCES `interview_user` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `interview_complaint_table` */
 
 insert  into `interview_complaint_table`(`id`,`Complaint`,`Date`,`Reply`,`USER_id`) values 
-(1,'bvcf','2023-12-20','545te5t',1234),
-(124,'bsdhj','2024-01-04','great',125),
-(456,'jfsj','2023-12-06','super',1234);
+(1,'fgdfg','2024-01-10','dfg',1);
 
 /*Table structure for table `interview_doubt` */
 
@@ -453,9 +457,12 @@ CREATE TABLE `interview_doubt` (
   KEY `interview_doubt_USER_id_f2131e4e_fk_interview_user_id` (`USER_id`),
   CONSTRAINT `interview_doubt_GUIDE_id_e49dfbb5_fk_interview_guide_id` FOREIGN KEY (`GUIDE_id`) REFERENCES `interview_guide` (`id`),
   CONSTRAINT `interview_doubt_USER_id_f2131e4e_fk_interview_user_id` FOREIGN KEY (`USER_id`) REFERENCES `interview_user` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `interview_doubt` */
+
+insert  into `interview_doubt`(`id`,`doubt`,`reply`,`date`,`GUIDE_id`,`USER_id`) values 
+(1,'dfgh','jyfj','2024-01-10',1,1);
 
 /*Table structure for table `interview_guide` */
 
@@ -472,19 +479,12 @@ CREATE TABLE `interview_guide` (
   PRIMARY KEY (`id`),
   KEY `interview_guide_LOGIN_id_027a7902_fk_interview_login_id` (`LOGIN_id`),
   CONSTRAINT `interview_guide_LOGIN_id_027a7902_fk_interview_login_id` FOREIGN KEY (`LOGIN_id`) REFERENCES `interview_login` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `interview_guide` */
 
 insert  into `interview_guide`(`id`,`First_name`,`Last_name`,`Address`,`Phone`,`Email`,`LOGIN_id`) values 
-(6,'sdff','ghjk','bvhgfu',1234,'fghgv',15),
-(7,'','','',9876543,' fghj',17),
-(8,'','','',-987,'nm,',18),
-(9,'','','',987654,'fvbnm',19),
-(10,'','','',8157595599,'abhishek456@gmail.com',20),
-(11,'','','',78965412,'gyg',27),
-(12,'','','',1234567890,'hgjgujh',28),
-(13,'','','',1234567890,'hgjgujh',29);
+(1,'ayana','k',' calicut',78945621232,'ayana@gmail.com',4);
 
 /*Table structure for table `interview_guideline` */
 
@@ -494,13 +494,18 @@ CREATE TABLE `interview_guideline` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `guidelines` varchar(60) NOT NULL,
   `details` varchar(60) NOT NULL,
-  `COMPANY_id` bigint NOT NULL,
+  `GUIDE_id` bigint NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `interview_guideline_COMPANY_id_ab00298a_fk_interview_company_id` (`COMPANY_id`),
-  CONSTRAINT `interview_guideline_COMPANY_id_ab00298a_fk_interview_company_id` FOREIGN KEY (`COMPANY_id`) REFERENCES `interview_company` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `interview_guideline_GUIDE_id_3cd30da5_fk_interview_guide_id` (`GUIDE_id`),
+  CONSTRAINT `interview_guideline_GUIDE_id_3cd30da5_fk_interview_guide_id` FOREIGN KEY (`GUIDE_id`) REFERENCES `interview_guide` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `interview_guideline` */
+
+insert  into `interview_guideline`(`id`,`guidelines`,`details`,`GUIDE_id`) values 
+(1,'ktyui','ghj',1),
+(2,'dwdwq','DWD',1),
+(3,'rtyu','ghjk',1);
 
 /*Table structure for table `interview_login` */
 
@@ -512,34 +517,19 @@ CREATE TABLE `interview_login` (
   `password` varchar(60) NOT NULL,
   `type` varchar(60) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `interview_login` */
 
 insert  into `interview_login`(`id`,`username`,`password`,`type`) values 
-(3,'bvf','567','guide'),
-(4,'bvf','bvf','guide'),
-(5,'yuio','098','guide'),
-(6,'nbgh','nbgh','guide'),
-(7,'vcgf','123','user'),
-(8,' nmn ',' 567','guide'),
-(9,'adminhhhhhh','hh','guide'),
-(10,'jjjjj','78','user'),
-(15,';nknk','465','user'),
-(16,'admin','123','admin'),
-(17,'123','123','company'),
-(18,'','mm','company'),
-(19,'','00','pending'),
-(20,'','59888','pending'),
-(21,'','123','pending'),
-(22,'','12345ty','pending'),
-(23,'','12345ty','pending'),
-(24,'','12345ty','pending'),
-(25,'','12345ty','pending'),
-(26,'','12345ty','pending'),
-(27,'','123','company'),
-(28,'','','company'),
-(29,'','1234','block');
+(1,'admin','123','admin'),
+(2,'company','123','company'),
+(3,'user','123','user'),
+(4,'guide','123','guide'),
+(5,'nghmg','123','guide'),
+(6,'nghmg','123','guide'),
+(8,'','','guide'),
+(9,'amal','amal','pending');
 
 /*Table structure for table `interview_questions` */
 
@@ -557,9 +547,14 @@ CREATE TABLE `interview_questions` (
   PRIMARY KEY (`id`),
   KEY `interview_questions_TEST_id_dc892f71_fk_interview_test_id` (`TEST_id`),
   CONSTRAINT `interview_questions_TEST_id_dc892f71_fk_interview_test_id` FOREIGN KEY (`TEST_id`) REFERENCES `interview_test` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `interview_questions` */
+
+insert  into `interview_questions`(`id`,`Question`,`option1`,`option2`,`option3`,`option4`,`Answer`,`TEST_id`) values 
+(1,'jmb','n','ddg','daff','dafdfhd','dhd',3),
+(3,'abcd','bcda','jkl','isl','sjfl','iwyeuf',3),
+(7,'rtui','r','u','y','t','k',3);
 
 /*Table structure for table `interview_review` */
 
@@ -576,12 +571,12 @@ CREATE TABLE `interview_review` (
   KEY `interview_review_USER_id_999c70c4_fk_interview_user_id` (`USER_id`),
   CONSTRAINT `interview_review_LOGIN_id_b0ce9e09_fk_interview_login_id` FOREIGN KEY (`LOGIN_id`) REFERENCES `interview_login` (`id`),
   CONSTRAINT `interview_review_USER_id_999c70c4_fk_interview_user_id` FOREIGN KEY (`USER_id`) REFERENCES `interview_user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=154 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `interview_review` */
 
 insert  into `interview_review`(`id`,`review`,`date`,`LOGIN_id`,`USER_id`) values 
-(1,'dfg','2023-11-30',4,125);
+(2,'super','2024-01-08',3,1);
 
 /*Table structure for table `interview_test` */
 
@@ -595,9 +590,13 @@ CREATE TABLE `interview_test` (
   PRIMARY KEY (`id`),
   KEY `interview_test_GUIDE_id_98c3b2dc_fk_interview_guide_id` (`GUIDE_id`),
   CONSTRAINT `interview_test_GUIDE_id_98c3b2dc_fk_interview_guide_id` FOREIGN KEY (`GUIDE_id`) REFERENCES `interview_guide` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `interview_test` */
+
+insert  into `interview_test`(`id`,`Exam_name`,`date`,`GUIDE_id`) values 
+(3,'final','2023-12-29 14:09:11.769114',1),
+(5,'midterm','2024-01-01 20:10:32.702073',1);
 
 /*Table structure for table `interview_test_result` */
 
@@ -631,9 +630,17 @@ CREATE TABLE `interview_tip` (
   PRIMARY KEY (`id`),
   KEY `interview_tip_GUIDE_id_22119123_fk_interview_guide_id` (`GUIDE_id`),
   CONSTRAINT `interview_tip_GUIDE_id_22119123_fk_interview_guide_id` FOREIGN KEY (`GUIDE_id`) REFERENCES `interview_guide` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `interview_tip` */
+
+insert  into `interview_tip`(`id`,`tips`,`details`,`GUIDE_id`) values 
+(1,'','',1),
+(2,'dfgh','ertyu',1),
+(3,'rtyui','fghj',1),
+(4,'ghj','ghjk',1),
+(5,'tyu','hjk',1),
+(6,'abcdef','fedddd',1);
 
 /*Table structure for table `interview_upload` */
 
@@ -665,18 +672,17 @@ CREATE TABLE `interview_user` (
   `pin` int NOT NULL,
   `phone` bigint NOT NULL,
   `email` varchar(60) NOT NULL,
+  `photo` varchar(100) NOT NULL,
   `LOGIN_id` bigint NOT NULL,
   PRIMARY KEY (`id`),
   KEY `interview_user_LOGIN_id_65969405_fk_interview_login_id` (`LOGIN_id`),
   CONSTRAINT `interview_user_LOGIN_id_65969405_fk_interview_login_id` FOREIGN KEY (`LOGIN_id`) REFERENCES `interview_login` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1235 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `interview_user` */
 
-insert  into `interview_user`(`id`,`First_name`,`Last_name`,`gender`,`place`,`post`,`pin`,`phone`,`email`,`LOGIN_id`) values 
-(124,'sfsf','sdfsdf','sdfs','fsf','fsdf',789,789,'hgjg',7),
-(125,'dfg','dlkfj','jdslkf','flsdkj','dlf',9869,5566,'ggdg',10),
-(1234,'spjjj','po','dfg','jakfks','hakfk ',785,8662,'snsdb',4);
+insert  into `interview_user`(`id`,`First_name`,`Last_name`,`gender`,`place`,`post`,`pin`,`phone`,`email`,`photo`,`LOGIN_id`) values 
+(1,'Abhinav','A S','Male','Calicut','Calicut',654321,9876543212,'abhi@gmail.com','(NULL)Adsfws',3);
 
 /*Table structure for table `interview_vac_qn` */
 
@@ -701,7 +707,7 @@ DROP TABLE IF EXISTS `interview_vaccancy`;
 CREATE TABLE `interview_vaccancy` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `job` varchar(600) NOT NULL,
-  `vaccancy` varchar(60) NOT NULL,
+  `Vaccancy` varchar(60) NOT NULL,
   `qualification` varchar(60) NOT NULL,
   `exp` varchar(60) NOT NULL,
   `salary` varchar(60) NOT NULL,
@@ -710,12 +716,12 @@ CREATE TABLE `interview_vaccancy` (
   PRIMARY KEY (`id`),
   KEY `interview_vaccancy_COMPANY_id_e683c8bd_fk_interview_company_id` (`COMPANY_id`),
   CONSTRAINT `interview_vaccancy_COMPANY_id_e683c8bd_fk_interview_company_id` FOREIGN KEY (`COMPANY_id`) REFERENCES `interview_company` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `interview_vaccancy` */
 
-insert  into `interview_vaccancy`(`id`,`job`,`vaccancy`,`qualification`,`exp`,`salary`,`details`,`COMPANY_id`) values 
-(1,'developers ','gghj','bca','8','52','lkjhgf',27);
+insert  into `interview_vaccancy`(`id`,`job`,`Vaccancy`,`qualification`,`exp`,`salary`,`details`,`COMPANY_id`) values 
+(1,'testr5','yh','+2','2 year','12300','hghjk',1);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

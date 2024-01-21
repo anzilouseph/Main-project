@@ -1,0 +1,28 @@
+{% extends 'guide/guidindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <div align="center">
+    <table width="374" border="1"class="table table-dark">
+
+      <tr>
+        <td>tips</td>
+        <td>details</td>
+      </tr>
+        {% for i in val %}
+      <tr>
+
+        <td>{{ i.tips}}</td>
+        <td>{{ i.details}}</td>
+      </tr>
+        {% endfor %}
+      <tr align="center">
+        <td colspan="7"><label>
+          <div align="center">
+            <a href="/add_tips"class="btn btn-success" >add new</a>
+            </div>
+        </label></td>
+      </tr>
+      </table>
+  </div>
+</form>
+{% endblock %}

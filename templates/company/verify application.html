@@ -1,18 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Untitled Document</title>
-</head>
-
-<body><center>
+{% extends 'company/companyindex.html' %}
+{% block body %}
 <form id="form1" name="form1" method="post" action="applicationsearch">
-  <table width="354" border="1">
+  <table width="354" border="1" class="table table-dark">
     <tr>
       <td colspan="4">Date
         <label>
-        <input type="date" name="textfield" />
-        <input type="submit" name="Submit" value="search " />
+        <input type="date" name="textfield" value="{{ n }}"/>
+        <input type="submit" name="Submit" value="search "class="btn btn-success"  />
       </label></td>
       <td width="55">&nbsp;</td>
     </tr>
@@ -25,17 +19,17 @@
     </tr>
       {% for i in val %}
     <tr>
-      <td>{{i.vaccancy.vaccancy}}</td>
+      <td>{{i.vaccancy.Vaccancy}}</td>
       <td>{{ i.USER.First_name }} {{ i.USER.Last_name }}</td>
       <td>{{i.status}}</td>
       <td>{{i.date}}</td>
-    <td>
-      <p><a href="#">Accept</a></p>
-      <p><a href="#">Reject</a></p>
+    <td>{% if i.status == "pending" %}
+      <p><a href="acceptapplication/{{ i.id }}">Accept</a></p>
+      <p><a href="rejectapplication/{{ i.id }}">Reject</a></p>
+        {% else %}{{ i.status }}{% endif %}
       </td>
     </tr>
       {% endfor %}
   </table>
 </form>
-</body>
-</html>
+{% endblock %}

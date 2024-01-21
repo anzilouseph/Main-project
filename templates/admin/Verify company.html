@@ -1,19 +1,21 @@
-<form action="" method="get"></form><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Untitled Document</title>
-</head>
-
-<body>
+{#<form action="" method="get"></form><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{##}
+{#<body>#}
+{% extends 'admin/index.html' %}
+{% block body %}
 <form name="form1" method="post" action="company_search">
   <div align="center">
-    <table width="512" height="182" border="1">
+    <table width="512" height="182" border="1" class="table table-dark">
         <tr>
         <td colspan="7">Company Name
           <label>
           <input type="text" name="textfield" />
-          <input type="submit" name="&#55357;&#56590; " value="search " />
+          <input type="submit" name="&#55357;&#56590; " value="search " class="btn btn-success" />
         </label></td>
       </tr>
 
@@ -34,8 +36,8 @@
         <td>{{i.Wedsite}}</td>
           <td>
               {% if i.LOGIN.type == 'pending' %}
-      <p><a href="accept/{{i.LOGIN.id }}">Accept</a></p>
-      <p><a href="reject/{{i.LOGIN.id }}">Reject</a></p>
+      <p><a href="accept/{{i.LOGIN.id }}" class="btn btn-success">Accept</a></p>
+      <p><a href="reject/{{i.LOGIN.id }}"class="btn btn-danger">reject</a></p>
          {% elif i.LOGIN.type == 'company' %}
              Accepted
       {% else %}
@@ -47,5 +49,6 @@
       </table>
   </div>
 </form>
-</body>
-</html>
+{#</body>#}
+{#</html>#}
+{% endblock %}

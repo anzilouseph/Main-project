@@ -1,5 +1,7 @@
+from datetime import datetime
+
 from django.db.models import Q
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render,redirect
 
 # Create your views here.
@@ -8,10 +10,10 @@ from interview.models import *
 
 
 def main(request):
-    return render(request,'admin/admi login.html')
+    return render(request,'index.html')
 
 def adminhm(request):
-    return render(request,'admin/admin home.html')
+    return render(request,'admin\index.html')
 
 def block_or_unblock(request):
     ob = guide.objects.all()
@@ -52,7 +54,7 @@ def viewreviewsearch(request):
     com=request.POST['select']
     ob1 = company.objects.all()
     ob=review.objects.filter(Q(date__icontains=n)|Q(LOGIN=com))
-    return render(request,'admin/view review.html',{'val':ob,'com':ob1})
+    return render(request,'admin/view review.html',{'val':ob,'com':ob1,'date':n})
 
 def viewuser(request):
     ob=User.objects.all()
@@ -69,24 +71,111 @@ def add_job_veccancy(request):
 
 def add_veccancy(request):
     job=request.POST['textfield']
-    vaccancy=  request.POST['textfield2']
+    v=  request.POST['textfield2']
     qualification = request.POST['textfield3']
     exp = request.POST['textfield4']
     salary = request.POST['textfield5']
     Details = request.POST['textfield6']
     Type = request.POST['textfield7']
+
+
     ob=vaccancy()
+    ob.job=job
+    ob.Vaccancy=v
+    ob.qualification=qualification
+    ob.exp=exp
+    ob.salary=salary
+    ob.details=Details
+    ob.Vaccancy=Type
+    ob.COMPANY=company.objects.get(LOGIN__id=request.session['lid'])
+    ob.save()
+    return HttpResponse('''<script>alert("added sucessfully");window.location="Mange_job_veccancy"</script>''')
 
 
+def edit_job(request,id):
+    ob=vaccancy.objects.get(id=id)
+    request.session['lid'] = ob.id
+    return render(request,'company/edit_job_ veccancy.html',{'val':ob})
 
-    return HttpResponse('''<script>alert("added sucessfully");window.location="/Manage_job_veccancy"</script>''')
 
+def edit_veccancy(request):
+    job=request.POST['textfield']
+    v=  request.POST['textfield2']
+    qualification = request.POST['textfield3']
+    exp = request.POST['textfield4']
+    salary = request.POST['textfield5']
+    Details = request.POST['textfield6']
+    Type = request.POST['textfield7']
+    ob=vaccancy.objects.get(id=request.session['lid'])
+    ob.job=job
+    ob.Vaccancy=v
+    ob.qualification=qualification
+    ob.exp=exp
+    ob.salary=salary
+    ob.details=Details
+    ob.Vaccancy=Type
+    # ob.COMPANY=company.objects.get(LOGIN__id=request.session['lid'])
+    ob.save()
+    return HttpResponse('''<script>alert("edited sucessfully");window.location="Mange_job_veccancy"</script>''')
+
+def delete_vaccancy(request, id):
+    login_obj = vaccancy.objects.get(id=id)
+    login_obj.delete()
+    return HttpResponse('''<script>alert("deleted successfully ");window.location="/Mange_job_veccancy"</script>''')
+"///////////////////////////////////////////////CHAT////////////////////////////////////////////////////"
 
 def chat_with_candidate(request):
-    return render(request,'company/chat with candidate.html')
+    ob = User.objects.all()
+    return render(request,'company/fur_chat.html',{'val':ob})
+
+
+
+
+def chatview(request):
+    ob = User.objects.all()
+    d=[]
+    for i in ob:
+        r={"name":i.First_name+" "+i.Last_name,'photo':i.photo.url,'email':i.email,'loginid':i.LOGIN.id}
+        d.append(r)
+    return JsonResponse(d, safe=False)
+
+
+
+def coun_msg(request,id):
+    ob1=chat.objects.filter(fromid__id=id,toid__id=request.session['lid'])
+    ob2=chat.objects.filter(fromid__id=request.session['lid'],toid__id=id)
+    combined_chat = ob1.union(ob2)
+    combined_chat=combined_chat.order_by('id')
+    res=[]
+    for i in combined_chat:
+        res.append({"from_id":i.fromid.id,"msg":i.message,"date":i.date,"chat_id":i.id})
+
+    obu=User.objects.get(LOGIN__id=id)
+
+
+    return JsonResponse({"data":res,"name":obu.First_name,"photo":obu.photo.url,"user_lid":obu.LOGIN.id})
+
+
+
+def coun_insert_chat(request,msg,id):
+    print("===",msg,id)
+    ob=chat()
+    ob.fromid=Login.objects.get(id=request.session['lid'])
+    ob.toid=Login.objects.get(id=id)
+    ob.message=msg
+    ob.date=datetime.now().strftime("%Y-%m-%d")
+    ob.save()
+
+    return JsonResponse({"task":"ok"})
+    # refresh messages chatlist
+
+
+
+
+"//////////////////////////////////////////////////////////////////////////////////////////////////"
 
 def company_home(request):
-    return render(request,'company/company home.html')
+    return render(request,'company/companyindex.html')
 
 def company_register(request):
     return render(request,'company register.html')
@@ -100,43 +189,38 @@ def add_register(request):
     username= request.POST['textfield6']
     password = request.POST['textfield7']
     ob=Login()
-    ob.Username=username
+    ob.username=username
     ob.password=password
-    ob.type='company'
+    ob.type='pending'
     ob.save()
-    obb=guide()
-    obb.Name=name
-    obb.Place=place
-    obb.Phone=phone
+    obb=company()
+    obb.name=name
+    obb.place=place
+    obb.phone=phone
     obb.Email=email
     obb.Website=website
     obb.LOGIN = ob
     obb.save()
-    return HttpResponse('''<script>alert("regesterd sucessfully");window.location="/company_register"</script>''')
+    return HttpResponse('''<script>alert("regesterd sucessfully");window.location="/"</script>''')
 
 def accept(request,id):
-    ob=company.objects.get(id=id)
+    ob=Login.objects.get(id=id)
     ob.type='company'
     ob.save()
     return HttpResponse('''<script>alert("accepted successfully ");window.location="/Verify_company"</script>''')
 
 def reject(request,id):
-    ob=company.objects.get(id=id)
+    ob=Login.objects.get(id=id)
     ob.type='reject'
     ob.save()
     return HttpResponse('''<script>alert("rejected successfully ");window.location="/Verify_company"</script>''')
 
 def Mange_job_veccancy(request):
-    return render(request,'company/Mange job veccancy.html')
-
-def Add_question(request):
-    return render(request,'guide/Add question.html')
+    ob=vaccancy.objects.all()
+    return render(request,'company/Mange job veccancy.html',{'val':ob})
 
 def add_text_type(request):
     return render(request,'guide/add text type.html')
-
-def add_tips(request):
-    return render(request,'guide/add tips.html')
 
 def reply(request,id):
     request.session['cid']=id
@@ -150,7 +234,47 @@ def sendreply(request):
     return HttpResponse('''<script>alert("updated sucessfully");window.location="/view_complaint"</script>''')
 
 def Guid_home(request):
-    return render(request,'guide/Guid home.html')
+    return render(request,'guide/guidindex.html')
+
+def manage_test_type(request):
+    ob=test.objects.all()
+    return render(request,'guide/manage test type.html', {'val':ob})
+
+
+def add_test(request):
+    return render(request,'guide/add text type.html')
+
+
+def addtest(request):
+    examname=request.POST['textfield']
+    date=  request.POST['textfield2']
+    ob=test()
+    ob.Exam_name=examname
+    ob.GUIDE=guide.objects.get(LOGIN__id=request.session['lid'])
+    ob.date=datetime.today()
+    ob.save()
+    return HttpResponse('''<script>alert("Added sucessfully");window.location="manage_test_type"</script>''')
+
+
+def edit_test(request,id):
+    request.session['gid']=id
+    ob=test.objects.get(id=id)
+    return render(request,'guide/edittest.html',{'val':ob})
+
+def edit_test_post(request):
+    examname = request.POST['textfield']
+    date= request.POST['textfield2']
+    ob = test.objects.get(id=request.session['gid'])
+    ob.Exam_name = examname
+    ob.date = date
+    ob.save()
+    return HttpResponse('''<script>alert("updated sucessfully");window.location="/manage_test_type"</script>''')
+
+
+def delete_test(request, id):
+    test_obj = test.objects.get(id=id)
+    test_obj.delete()
+    return HttpResponse('''<script>alert("deleted successfully ");window.location="/manage_test_type"</script>''')
 
 def add_guide(request):
     return render(request,'admin/addguide.html')
@@ -216,22 +340,113 @@ def add_guidecode(request):
     return HttpResponse('''<script>alert("added sucessfully");window.location="/manage_guide"</script>''')
 
 def manage_question(request):
-    return render(request, 'guide/manage question.html')
+    ob = Questions.objects.all()
+    ob1 = test.objects.all()
+    return render(request, 'guide/manage question.html',{'val':ob,'tst':ob1})
 
-def manage_test_type(request):
-    return render(request, 'guide/manage test type.html')
+def delete_Question(request, id):
+    Questions_obj = Questions.objects.get(id=id)
+    Questions_obj.delete()
+    return HttpResponse('''<script>alert("deleted successfully ");window.location="/manage_question"</script>''')
+
+def edit_Question(request,id):
+    request.session['gid']=id
+    ob=Questions.objects.get(id=id)
+    return render(request,'guide/Edit question.html',{'val':ob})
+
+def edit_question_post(request):
+    test1=request.POST['select']
+    question= request.POST['textfield']
+    option1= request.POST['textfield2']
+    option2= request.POST['textfield3']
+    option3= request.POST['textfield4']
+    option4= request.POST['textfield5']
+    Answer= request.POST['textfield6']
+    ob = Questions.objects.get(id=request.session['gid'])
+    ob.Question = question
+    ob.option1 = option1
+    ob.option2 = option2
+    ob.option3 = option3
+    ob.option4 = option4
+    ob.Answer = Answer
+    ob.save()
+    return HttpResponse('''<script>alert("added sucessfully");window.location="manage_question"</script>''')
+
+
+def Testsearch(request):
+    n=request.POST['select']
+    ob1 = test.objects.all()
+    ob=Questions.objects.filter(TEST_id=n)
+    return render(request,'guide/manage question.html', {'val':ob,'tst':ob1})
+
+
+
+def add_question(request):
+    ob = test.objects.all()
+    return render(request,'guide/Add question.html',{'val':ob})
+
+
+def add_question_post(request):
+    test1=request.POST['select']
+    question=  request.POST['textfield']
+    option1 = request.POST['textfield2']
+    option2 = request.POST['textfield3']
+    option3 = request.POST['textfield4']
+    option4 = request.POST['textfield5']
+    answer = request.POST['textfield6']
+    ob=Questions()
+    ob.TEST=test.objects.get(id=test1)
+    ob.Question=question
+    ob.option1=option1
+    ob.option2=option2
+    ob.option3=option3
+    ob.option4=option4
+    ob.Answer=answer
+    ob.save()
+    return HttpResponse('''<script>alert("added sucessfully");window.location="manage_question"</script>''')
+
 
 def Send_reply(request):
     return render(request, 'guide/Send reply.html')
 
 def view_doubt(request):
-    return render(request, 'guide/view doubt.html')
+    ob=doubt.objects.filter(GUIDE__LOGIN__id=request.session['lid'])
+    return render(request, 'guide/view doubt.html',{"val":ob})
+
+def view_doubt_search(request):
+    date = request.POST['textfield']
+    ob=doubt.objects.filter(GUIDE__LOGIN__id=request.session['lid'], date=date)
+    return render(request, 'guide/view doubt.html',{"val":ob, 'date': str(date)})
+
+def doubtreply(request,id):
+    request.session['cid']=id
+    return render(request,'guide/Send reply.html')
+
+def doubt_reply(request):
+    reply = request.POST['textfield']
+    obb =doubt.objects.get(id=request.session['cid'])
+    obb.reply = reply
+    obb.save()
+    return HttpResponse('''<script>alert("updated sucessfully");window.location="/view_doubt"</script>''')
+
 
 def view_guid_line(request):
-    return render(request, 'guide/view guid line.html')
+    ob = guideline.objects.filter(GUIDE__LOGIN__id=request.session['lid'])
+    return render(request, 'guide/view guid line.html',{"val":ob})
 
-def view_Review(request):
-    return render(request, 'guide/view Review.html')
+def add_guidlines(request):
+    return render(request,'guide/add guidlines.html')
+
+def addguidlines(request):
+    guidlines=  request.POST['textfield2']
+    detail = request.POST['textfield3']
+    ob=guideline()
+    ob.guidelines=guidlines
+    ob.details=detail
+    ob.GUIDE = guide.objects.get(LOGIN_id=request.session['lid'])
+    ob.save()
+    return HttpResponse('''<script>alert("Added sucessfully");window.location="view_guid_line"</script>''')
+
 
 def log_out(request):
     return render(request, 'guide/admi login.html')
@@ -243,16 +458,13 @@ def log_in(request):
     if ob.type=='admin':
        return HttpResponse('''<script>alert("Welcome to Admin home");window.location="/adminhm"</script>''')
     elif ob.type=='company':
+        request.session['lid']=ob.id
         return HttpResponse('''<script>alert("Welcome to company");window.location="/company_home"</script>''')
-    elif ob.type=='guid':
-        return HttpResponse('''<script>alert("Welcome to guid");window.location="/Guid_home"</script>''')
+    elif ob.type=='guide':
+        request.session['lid'] = ob.id
+        return HttpResponse('''<script>alert("Welcome to guide");window.location="/Guid_home"</script>''')
     else:
         return HttpResponse('''<script>alert("invalid username or password");window.location="/"</script>''')
-
-
-
-#def company_home(request):
-  #  return render(request,'company/company home.html')
 
 def Manage_job_veccancy(request):
     ob=company.objects.all()
@@ -268,20 +480,45 @@ def verify_application(request):
 def applicationsearch(request):
     n=request.POST['textfield']
     ob=app_req.objects.filter(date__icontains=n)
-    return render(request,'company/verify application.html',{'val':ob})
+    return render(request,'company/verify application.html',{'val':ob, 'n': n})
 
 def acceptapplication(request,id):
     ob=app_req.objects.get(id=id)
-    ob.type='app_req'
+    ob.status='Accepetd'
     ob.save()
-    return HttpResponse('''<script>alert("accepted successfully ");window.location="/Verify_company"</script>''')
+    return HttpResponse('''<script>alert("accepted successfully ");window.location="/verify_application"</script>''')
 
 def rejectapplication(request,id):
     ob=app_req.objects.get(id=id)
-    ob.type='reject'
+    ob.status='Rejected'
     ob.save()
-    return HttpResponse('''<script>alert("rejected successfully ");window.location="/Verify_company"</script>''')
+    return HttpResponse('''<script>alert("rejected successfully ");window.location="/verify_application"</script>''')
+
+def add_tips(request):
+    return render(request,'guide/add tips.html')
+
+def addtips(request):
+    tip1=  request.POST['textfield2']
+    detail = request.POST['textfield3']
+    ob=tip()
+    ob.tips=tip1
+    ob.details=detail
+    ob.GUIDE = guide.objects.get(LOGIN_id=request.session['lid'])
+    ob.save()
+    return HttpResponse('''<script>alert("Added sucessfully");window.location="view_tips"</script>''')
+
+def view_tips(request):
+    ob=tip.objects.all()
+    return render(request, 'guide/view tips.html',{'val':ob})
 
 
 
+def view_Review(request):
+    ob =review.objects.all()
+    ob1 =company.objects.all()
+    return render(request,'guide/view Review.html', {'val':ob,'com':ob1})
 
+def viewReviewsearch(request):
+    n=request.POST['textfield']
+    ob=review.objects.filter(date__icontains=n)
+    return render(request,'guide/view Review.html',{'val':ob,'date':n})

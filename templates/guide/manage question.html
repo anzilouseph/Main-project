@@ -1,19 +1,17 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Untitled Document</title>
-</head>
-
-<body><center>
-<form id="form1" name="form1" method="post" action="">
-  <table width="401" border="1">
+{% extends 'guide/guidindex.html' %}
+{% block body %}
+<center>
+<form id="form1" name="form1" method="post" action="/Testsearch">
+  <table width="401" border="1"class="table table-dark">
     <tr>
-      <td colspan="6">Test Type 
+      <td colspan="6">Test Type
         <label>
         <select name="select">
+            {% for i in tst %}
+                <option value="{{ i.id }}">{{i.Exam_name}}</option>
+            {% endfor %}
         </select>
-        <input type="submit" name="Submit" value="search " />
+        <input type="submit" name="Submit" value="search " class="btn btn-success" />
       </label></td>
       <td width="21">&nbsp;</td>
     </tr>
@@ -26,23 +24,25 @@
       <td width="34">Answer</td>
       <td>&nbsp;</td>
     </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td><p><a href="#">Submit</a></p>
-      <p><a href="#">Delete</a></p></td>
+ {% for i in val %}
+      <tr>
+      <td>{{ i.Question }}</td>
+      <td>{{ i.option1 }}</td>
+      <td>{{ i.option2 }}</td>
+      <td>{{ i.option3 }}</td>
+      <td>{{ i.option4 }}</td>
+      <td>{{ i.Answer }}</td>
+      <td><p><a href="edit_Question/{{ i.id }}" class="btn btn-success">edit</a></p>
+      <p><a href="delete_Question/{{ i.id }}"class="btn btn-danger">Delete</a></p></td>
     </tr>
-    <tr>
+            {% endfor %}
+
+    <tr align="center">
       <td colspan="7"><div align="center"><a href="#">
-        <input type="submit" name="Submit2" value="ADD" />
+        <a href="add_question"class="btn btn-success" >ADD</a>
         <label></label>
       </a></div></td>
     </tr>
   </table>
 </form>
-</body>
-</html>
+{% endblock %}

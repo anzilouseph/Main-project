@@ -15,6 +15,7 @@ class User(models.Model):
     pin=models.IntegerField()
     phone=models.BigIntegerField()
     email = models.CharField(max_length=60)
+    photo=models.FileField()
 
 class Complaint_table(models.Model):
     USER = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -52,14 +53,13 @@ class doubt(models.Model):
     date=models.DateField(max_length=60)
 
 class chat(models.Model):
-    from_id=models.CharField(max_length=60)
-    To_id=models.CharField(max_length=60)
-    date=models.CharField(max_length=60)
-    message=models.CharField(max_length=60)
-    time=models.TimeField(max_length=60)
+    fromid=models.ForeignKey(Login,on_delete=models.CASCADE,related_name="f")
+    toid=models.ForeignKey(Login,on_delete=models.CASCADE,related_name="t")
+    date=models.DateField()
+    message=models.CharField(max_length=1000)
 
 class guideline(models.Model):
-    COMPANY = models.ForeignKey(company, on_delete=models.CASCADE)
+    GUIDE = models.ForeignKey(guide, on_delete=models.CASCADE)
     guidelines = models.CharField(max_length=60)
     details = models.CharField(max_length=60)
 
