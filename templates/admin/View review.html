@@ -1,0 +1,48 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{##}
+{#<body>#}
+{% extends 'admin/index.html' %}
+{% block body %}
+<center>
+<form id="form1" name="form1" method="post" action="viewreviewsearch">
+  <table width="344" border="1" class="table table-dark">
+    <tr>
+        <td colspan="2">Company name
+        <label>
+        <select name="select">
+            {% for i in com %}
+                <option value="{{ i.LOGIN.id }}">{{i.name}}</option>
+            {% endfor %}
+        </select>
+      </label></td>
+      <td colspan="3">Date 
+        <label>
+        <input type="date" name="textfield" value="{{ date }}" required/>
+        <input type="submit" name="Submit" value="Search" class="btn btn-success"/>
+      </label></td>
+    </tr>
+
+    <tr>
+      <td width="47">Username</td>
+      <!--<td width="47">Company</td>-->
+      <td width="71">Review</td>
+      <td width="204">Date</td>
+    </tr>
+      {% for i in val %}
+    <tr>
+      <td>{{ i.USER.First_name}}{{ i.USER.Last_name}}</td>
+      <!--<td>{{ i.LOGIN.company}}</td>-->
+      <td>&nbsp;{{i.review}}</td>
+      <td>&nbsp;{{i.date}}</td>
+    </tr>
+       {% endfor %}
+  </table>
+</form>
+{#</body>#}
+{#</html>#}
+{% endblock %}

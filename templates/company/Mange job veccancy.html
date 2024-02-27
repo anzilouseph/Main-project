@@ -1,0 +1,32 @@
+{% extends 'company/companyindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="add_job_veccancy">
+  <table width="299" border="1" class="table table-dark">
+    <tr>
+      <td width="61">Job name </td>
+      <td width="59">Details</td>
+      <td width="75">vaccancy</td>
+      <td width="76"></td>
+    </tr>
+      {% for i in val %}
+    <tr>
+      <td>{{ i.job }}</td>
+      <td>{{ i.details }}</td>
+      <td>&nbsp;{{ i.Vaccancy }}</td>
+      <td><p><a href="edit_job/{{ i.id }}"class="btn btn-success">Edit</a></p>
+          <p><a href="delete_vaccancy/{{ i.id }}"class="btn btn-danger">Delete</a></p>
+          <p><a href="/add_vac_qstion/{{ i.id }}" class="btn btn-info">Add Question</a></p>
+        </td>
+    </tr>
+      {% endfor %}
+    <tr>
+      <td colspan="4"><label> </label>
+        <div align="center"><a href="#"></a>        
+          <label>
+          <input type="submit" name="Submit" value="ADD" class="btn btn-success" required/>
+          </label>
+        </div></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

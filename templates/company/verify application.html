@@ -1,0 +1,35 @@
+{% extends 'company/companyindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="applicationsearch">
+  <table width="354" border="1" class="table table-dark">
+    <tr>
+      <td colspan="4">Date
+        <label>
+        <input type="date" name="textfield" value="{{ n }}"required/>
+        <input type="submit" name="Submit" value="search "class="btn btn-success" required />
+      </label></td>
+      <td width="55">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="82">Vaccancy</td>
+      <td width="60">User</td>
+      <td width="60">Status</td>
+      <td width="63">Date</td>
+      <td></td>
+    </tr>
+      {% for i in val %}
+    <tr>
+      <td>{{i.vaccancy.Vaccancy}}</td>
+      <td>{{ i.USER.First_name }} {{ i.USER.Last_name }}</td>
+      <td>{{i.status}}</td>
+      <td>{{i.date}}</td>
+    <td>{% if i.status == "pending" %}
+      <p><a href="acceptapplication/{{ i.id }}">Accept</a></p>
+      <p><a href="rejectapplication/{{ i.id }}">Reject</a></p>
+        {% else %}{{ i.status }}{% endif %}
+      </td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

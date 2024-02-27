@@ -1,0 +1,27 @@
+{% extends 'guide/guidindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/add_test">
+  <table width="285" height="109" border="1"class="table table-dark">
+    <tr>
+      <td width="76">Exam name </td>
+      <td width="29">Date</td>
+      <td width="92">&nbsp;</td>
+    </tr>
+      {% for i in val  %}
+    <tr>
+      <td>&nbsp;{{ i.Exam_name }}</td>
+      <td>&nbsp;{{ i.date }}</td>
+      <td><p align="center"><a href="edit_test/{{ i.id }}"class="btn btn-success" >Edit</a></p>
+      <p align="center"><a href=" delete_test/{{ i.id }}"class="btn btn-danger" >Delete</a></p>
+    </tr>
+      {% endfor %}
+    <tr>
+      <td colspan="4"><div align="center"><a href="#">
+        <label>
+        <input type="submit" name="Submit" value="ADD" class="btn btn-success"required />
+        </label>
+      </a></div></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

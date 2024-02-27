@@ -1,0 +1,16 @@
+{% extends 'guide/guidindex.html' %}
+{% block body %}
+<center>
+<form id="form1" name="form1" method="post" action="/doubt_reply">
+  <table width="315" height="97" border="1"class="table table-dark">
+    <tr>
+      <td>Reply
+        <label>
+        <input type="text" name="textfield" />
+        <br /><center>
+        <input type="submit" name="Submit" value="Send" class="btn btn-success"required />
+      </label></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

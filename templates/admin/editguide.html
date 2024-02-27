@@ -1,0 +1,60 @@
+
+{% extends 'admin/index.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/edit_guide_post">
+<table width="355" border="1"class="table table-dark">
+  <tr>
+    <td width="95">First name </td>
+    <td width="244">
+
+      <label>
+        <input type="text" name="textfield" value="{{ val.First_name }}"required pattern="[A-Z a-z.]{3,25}"/>
+        </label>
+    </td>
+  </tr>
+  <tr>
+    <td>Last name </td>
+    <td>
+      <label>
+        <input type="text" name="textfield2" value="{{ val.Last_name }}"required pattern="[A-Z a-z.]{1,25}"/>
+        </label>
+      </td>
+  </tr>
+  <tr>
+    <td>Address</td>
+    <td>
+      <label>
+        <textarea name="textarea" required> {{ val.Address }}</textarea>
+        </label>
+      </td>
+  </tr>
+  <tr>
+    <td>Phone</td>
+    <td>
+      <label>
+        <input type="text" name="textfield3" value="{{ val.Phone }}" required pattern="[6789][0-9]{9}"/>
+        </label>
+      </td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td>
+      <label>
+        <input type="email" name="textfield4"value="{{ val.Email }} " required/>
+        </label>
+      </td>
+  </tr>
+
+  <tr align="center">
+    <td colspan="2">
+      <label>
+      <div align="center">
+        <input type="submit" name="Submit" value="update" class="btn btn-success"/>
+      </div>
+      </label>
+      </td>
+  </tr>
+</table>
+</form>
+{% endblock %}
+

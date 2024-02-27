@@ -1,0 +1,61 @@
+{% extends 'guide/guidindex.html' %}
+{% block body %}
+<center>
+<form id="form1" name="form1" method="post" action="{% url 'edit_question_post' %}">
+  <table width="200" border="1"class="table table-dark">
+{#    <tr>#}
+{#       <td colspan="3">Test#}
+{#        <label>#}
+{#        <select name="select">#}
+{#            {% for i in val %}#}
+{#                <option value="{{ i.id }}">{{i.Exam_name}}</option>#}
+{#            {% endfor %}#}
+{#        </select>#}
+{#      </label></td>#}
+{#    </tr>#}
+    <tr>
+      <td>Question</td>
+      <td><label>
+        <input type="text" name="textfield" required value="{{ val.Question }}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Option 1 </td>
+      <td><label> </label>
+            <input type="text" name="textfield2"required value="{{ val.option1 }}"/>
+        </td>
+    </tr>
+    <tr>
+      <td>Option 2 </td>
+      <td><label>
+        <input type="text" name="textfield3" required value="{{ val.option2 }}"/>
+      </label></td>
+    </tr>
+  <tr>
+      <td>Option 3 </td>
+      <td><label> </label>
+            <input type="text" name="textfield4" required value="{{ val.option3 }}"/>
+      </td>
+    </tr>
+    <tr>
+      <td>Option 4 </td>
+      <td><label>
+        <input type="text" name="textfield5" required value="{{ val.option4 }}"/>
+      </label></td>
+    </tr>
+  <tr>
+      <td>Answer </td>
+      <td><label>
+        <input type="text" name="textfield6"required value="{{ val.Answer }}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td height="28" colspan="2"><label>
+      <div align="center">
+        <input type="submit" name="Submit" value="Add " class="btn btn-success" required/>
+      </div>
+      </label></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

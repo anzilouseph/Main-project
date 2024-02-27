@@ -1,0 +1,28 @@
+{% extends 'guide/guidindex.html' %}
+{% block body %}
+<center>
+<form id="form1" name="form1" method="post" action="viewReviewsearch">
+  <table width="300" border="1"class="table table-dark">
+    <tr>
+      <td colspan="3">Date 
+        <label>
+        <input type="date" name="textfield" value="{{ date }}" required/>
+        <input type="submit" name="Submit" value="Search" class="btn btn-success" required/>
+      </label></td>
+    </tr>
+
+    <tr>
+      <td width="76">Review</td>
+      <td width="109">User Name </td>
+      <td width="93">Date</td>
+    </tr>
+         {% for i in val %}
+    <tr>
+      <td>{{i.review}}</td>
+      <td>&nbsp;{{ i.USER.First_name}}{{ i.USER.Last_name}}</td>
+      <td>&nbsp;{{i.date}}</td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

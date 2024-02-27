@@ -1,0 +1,35 @@
+{% extends 'guide/guidindex.html' %}
+{% block body %}
+<center>
+<form id="form1" name="form1" method="post" action="/view_doubt_search">
+  <table width="329" height="124" border="1"class="table table-dark">
+    <tr>
+      <td colspan="4">Date
+        <label>
+        <input type="date" name="textfield" value="{{ date }}"required/>
+        </label> 
+        <label>
+        <input type="submit" name="Submit" value="search" class="btn btn-success"required />
+      </label></td>
+    </tr>
+    <tr>
+      <td width="151">User Name </td>
+      <td width="76">Doubts</td>
+        <td>Date</td>
+      <td>Reply</td>
+    </tr>
+      {% for i in val %}
+    <tr>
+      <td>&nbsp;{{ i.USER.First_name }} {{ i.USER.Last_name }}</td>
+      <td>{{ i.doubt }}</td>
+      <td>{{ i.date }}</td>
+        {% if i.reply == "pending" %}
+      <td><a href="doubtreply/{{ i.id }}"class="btn btn-success" >Reply</a></td>
+    {% else %}
+    <td><p>{{ i.reply }}</p></td>
+    {% endif %}
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

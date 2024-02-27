@@ -1,0 +1,37 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{##}
+{#<body>#}
+{% extends 'admin/index.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <div align="center">
+    <table width="200" border="1" class="table table-dark">
+      <tr>
+        <td>Username</td>
+        <td>Date</td>
+        <td>Complaint</td>
+        <td>Reply</td>
+      </tr>
+        {% for i in val %}
+      <tr>
+        <td>&nbsp;{{ i.USER.First_name}}&nbsp;{{ i.USER.Last_name}}</td>
+        <td>{{ i.Date}}</td>
+        <td>{{ i.Complaint}}</td>
+{#          <td>{{ i.Reply}}</td>#}
+        <td>  {% if i.Reply == 'pending' %}
+            <a href="reply/{{i.id}}"class="btn btn-success">Reply</a>
+            {% else %}{{ i.Reply }}</td>
+        {% endif %}
+      </tr>
+         {% endfor %}
+      </table>
+  </div>
+</form>
+{#</body>#}
+{#</html>#}
+{% endblock %}
