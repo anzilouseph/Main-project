@@ -9,7 +9,7 @@ from django.db.models import Q
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render,redirect
 
-# from emotion import *
+from interview.emotion import *
 from interview.models import *
 from interview.test import checkans
 import speech_recognition as sr
@@ -18,50 +18,50 @@ def main(request):
 def logout(request):
     auth.logout(request)
     return render(request,'index.html')
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def adminhm(request):
     return render(request,'admin\index.html')
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def block_or_unblock(request):
     ob = guide.objects.all()
     return render(request,'admin/blockor unblock guide.html' , {'val':ob})
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def manage_guide(request):
     ob=guide.objects.all()
     return render(request,'admin/Manage guide.html', {'val':ob})
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def manageguidesearch(request):
     n=request.POST['textfield']
     ob=guide.objects.filter(Q(First_name__icontains=n)|Q(Last_name__icontains=n))
     return render(request,'admin/Manage guide.html',{'val':ob})
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def send_reply(request):
     return render(request,'admin/send reply.html')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def Verify_company(request):
     ob = company.objects.all()
     return render(request,'admin/Verify company.html', {'val':ob})
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def company_search(request):
     n=request.POST['textfield']
     ob=company.objects.filter(name__icontains=n)
     return render(request,'admin/Verify company.html',{'val':ob})
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def view_complaint(request):
     ob=Complaint_table.objects.all()
     return render(request,'admin/view compaint.html', {'val':ob})
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def view_review(request):
     ob =review.objects.all()
     ob1 =company.objects.all()
     return render(request,'admin/view review.html', {'val':ob,'com':ob1})
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def viewreviewsearch(request):
     n=request.POST['textfield']
     com=request.POST['select']
@@ -69,22 +69,22 @@ def viewreviewsearch(request):
     ob=review.objects.filter(Q(date__icontains=n)|Q(LOGIN=com))
     return render(request,'admin/view review.html',{'val':ob,'com':ob1,'date':n})
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def viewuser(request):
     ob=User.objects.all()
     return render(request,'admin/viewuser.html',{'val':ob})
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def viewusersearch(request):
     n=request.POST['textfield']
     ob=User.objects.filter(First_name__icontains=n,)
     return render(request,'admin/viewuser.html',{'val':ob})
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def add_job_veccancy(request):
     return render(request,'company/add job veccancy.html')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def add_veccancy(request):
     job=request.POST['textfield']
     v=  request.POST['textfield2']
@@ -107,13 +107,13 @@ def add_veccancy(request):
     ob.save()
     return HttpResponse('''<script>alert("added sucessfully");window.location="Mange_job_veccancy"</script>''')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def edit_job(request,id):
     ob=vaccancy.objects.get(id=id)
     request.session['lid'] = ob.id
     return render(request,'company/edit_job_ veccancy.html',{'val':ob})
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def edit_veccancy(request):
     job=request.POST['textfield']
     v=  request.POST['textfield2']
@@ -134,21 +134,21 @@ def edit_veccancy(request):
     ob.save()
     return HttpResponse('''<script>alert("edited sucessfully");window.location="Mange_job_veccancy"</script>''')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def delete_vaccancy(request, id):
     login_obj = vaccancy.objects.get(id=id)
     login_obj.delete()
     return HttpResponse('''<script>alert("deleted successfully ");window.location="/Mange_job_veccancy"</script>''')
 "///////////////////////////////////////////////CHAT////////////////////////////////////////////////////"
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def chat_with_candidate(request):
     ob = User.objects.all()
     return render(request,'company/fur_chat.html',{'val':ob})
 
 
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def chatview(request):
     ob = User.objects.all()
     d=[]
@@ -158,7 +158,7 @@ def chatview(request):
     return JsonResponse(d, safe=False)
 
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def coun_msg(request,id):
     ob1=chat.objects.filter(fromid__id=id,toid__id=request.session['lid'])
     ob2=chat.objects.filter(fromid__id=request.session['lid'],toid__id=id)
@@ -174,7 +174,7 @@ def coun_msg(request,id):
     return JsonResponse({"data":res,"name":obu.First_name,"photo":obu.photo.url,"user_lid":obu.LOGIN.id})
 
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def coun_insert_chat(request,msg,id):
     print("===",msg,id)
     ob=chat()
@@ -191,7 +191,7 @@ def coun_insert_chat(request,msg,id):
 
 
 "//////////////////////////////////////////////////////////////////////////////////////////////////"
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def company_home(request):
     return render(request,'company/companyindex.html')
 
@@ -221,35 +221,35 @@ def add_register(request):
     obb.save()
     return HttpResponse('''<script>alert("regesterd sucessfully");window.location="/"</script>''')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def accept(request,id):
     ob=Login.objects.get(id=id)
     ob.type='company'
     ob.save()
     return HttpResponse('''<script>alert("accepted successfully ");window.location="/Verify_company"</script>''')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def reject(request,id):
     ob=Login.objects.get(id=id)
     ob.type='reject'
     ob.save()
     return HttpResponse('''<script>alert("rejected successfully ");window.location="/Verify_company"</script>''')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def Mange_job_veccancy(request):
     ob=vaccancy.objects.all()
     return render(request,'company/Mange job veccancy.html',{'val':ob})
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def add_text_type(request):
     return render(request,'guide/add text type.html')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def reply(request,id):
     request.session['cid']=id
     return render(request,'admin/send reply.html')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def sendreply(request):
     reply = request.POST['textfield']
     obb = Complaint_table.objects.get(id=request.session['cid'])
@@ -257,20 +257,20 @@ def sendreply(request):
     obb.save()
     return HttpResponse('''<script>alert("updated sucessfully");window.location="/view_complaint"</script>''')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def Guid_home(request):
     return render(request,'guide/guidindex.html')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def manage_test_type(request):
     ob=test.objects.all()
     return render(request,'guide/manage test type.html', {'val':ob})
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def add_test(request):
     return render(request,'guide/add text type.html')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def addtest(request):
     examname=request.POST['textfield']
     date=  request.POST['textfield2']
@@ -281,13 +281,13 @@ def addtest(request):
     ob.save()
     return HttpResponse('''<script>alert("Added sucessfully");window.location="manage_test_type"</script>''')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def edit_test(request,id):
     request.session['gid']=id
     ob=test.objects.get(id=id)
     return render(request,'guide/edittest.html',{'val':ob})
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def edit_test_post(request):
     examname = request.POST['textfield']
     date= request.POST['textfield2']
@@ -297,43 +297,43 @@ def edit_test_post(request):
     ob.save()
     return HttpResponse('''<script>alert("updated sucessfully");window.location="/manage_test_type"</script>''')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def delete_test(request, id):
     test_obj = test.objects.get(id=id)
     test_obj.delete()
     return HttpResponse('''<script>alert("deleted successfully ");window.location="/manage_test_type"</script>''')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def add_guide(request):
     return render(request,'admin/addguide.html')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def block_guide(request,id):
     ob=Login.objects.get(id=id)
     ob.type='block'
     ob.save()
     return HttpResponse('''<script>alert("blocked successfully ");window.location="/block_or_unblock"</script>''')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def unblock_guide(request,id):
     ob=Login.objects.get(id=id)
     ob.type='user'
     ob.save()
     return HttpResponse('''<script>alert("unblocked successfully ");window.location="/block_or_unblock"</script>''')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def delete_guide(request, id):
     login_obj = Login.objects.get(id=id)
     login_obj.delete()
     return HttpResponse('''<script>alert("deleted successfully ");window.location="/manage_guide"</script>''')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def edit_guide(request,id):
     request.session['gid']=id
     ob=guide.objects.get(id=id)
     return render(request,'admin/editguide.html',{'val':ob})
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def edit_guide_post(request):
     firstname = request.POST['textfield']
     lname = request.POST['textfield2']
@@ -349,7 +349,7 @@ def edit_guide_post(request):
     obb.save()
     return HttpResponse('''<script>alert("updated sucessfully");window.location="/manage_guide"</script>''')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def add_guidecode(request):
     firstname=request.POST['textfield']
     lname=request.POST['textfield2']
@@ -373,25 +373,25 @@ def add_guidecode(request):
     obb.save()
     return HttpResponse('''<script>alert("added sucessfully");window.location="/manage_guide"</script>''')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def manage_question(request):
     ob = Questions.objects.all()
     ob1 = test.objects.all()
     return render(request, 'guide/manage question.html',{'val':ob,'tst':ob1})
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def delete_Question(request, id):
     Questions_obj = Questions.objects.get(id=id)
     Questions_obj.delete()
     return HttpResponse('''<script>alert("deleted successfully ");window.location="/manage_question"</script>''')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def edit_Question(request,id):
     request.session['qid']=id
     ob=Questions.objects.get(id=id)
     return render(request,'guide/Edit question.html',{'val':ob})
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def edit_question_post(request):
     # test1=request.POST['select']
     question= request.POST['textfield']
@@ -410,7 +410,7 @@ def edit_question_post(request):
     ob.save()
     return HttpResponse('''<script>alert("Updated sucessfully");window.location="manage_question"</script>''')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def Testsearch(request):
     n=request.POST['select']
     ob1 = test.objects.all()
@@ -418,12 +418,12 @@ def Testsearch(request):
     return render(request,'guide/manage question.html', {'val':ob,'tst':ob1,'n':int(n)})
 
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def add_question(request):
     ob = test.objects.all()
     return render(request,'guide/Add question.html',{'val':ob})
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def add_question_post(request):
     test1=request.POST['select']
     question=  request.POST['textfield']
@@ -443,27 +443,27 @@ def add_question_post(request):
     ob.save()
     return HttpResponse('''<script>alert("added sucessfully");window.location="manage_question"</script>''')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def Send_reply(request):
     return render(request, 'guide/Send reply.html')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def view_doubt(request):
     ob=doubt.objects.filter(GUIDE__LOGIN__id=request.session['lid'])
     return render(request, 'guide/view doubt.html',{"val":ob})
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def view_doubt_search(request):
     date = request.POST['textfield']
     ob=doubt.objects.filter(GUIDE__LOGIN__id=request.session['lid'], date=date)
     return render(request, 'guide/view doubt.html',{"val":ob, 'date': str(date)})
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def doubtreply(request,id):
     request.session['cid']=id
     return render(request,'guide/Send reply.html')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def doubt_reply(request):
     reply = request.POST['textfield']
     obb =doubt.objects.get(id=request.session['cid'])
@@ -471,16 +471,16 @@ def doubt_reply(request):
     obb.save()
     return HttpResponse('''<script>alert("updated sucessfully");window.location="/view_doubt"</script>''')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def view_guid_line(request):
     ob = guideline.objects.filter(GUIDE__LOGIN__id=request.session['lid'])
     return render(request, 'guide/view guid line.html',{"val":ob})
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def add_guidlines(request):
     return render(request,'guide/add guidlines.html')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def addguidlines(request):
     guidlines=  request.POST['textfield2']
     detail = request.POST['textfield3']
@@ -503,26 +503,26 @@ def log_in(request):
             var=auth.authenticate(username='admin',password='admin')
             if var is not None:
                 auth.login(request,var)
-            return redirect("/adminhm")
+            return render(request,'admin\index.html')
         elif ob.type=='company':
             request.session['lid']=ob.id
             var = auth.authenticate(username='admin', password='admin')
             if var is not None:
                 auth.login(request, var)
-                return redirect("/company_home")
+            return render(request,'company/companyindex.html')
         elif ob.type=='guide':
             request.session['lid'] = ob.id
             var = auth.authenticate(username='admin', password='admin')
             if var is not None:
                 auth.login(request, var)
-            return redirect("/Guid_home")
+            return render(request,'guide/guidindex.html')
         else:
             return HttpResponse('''<script>alert("invalid username or password");window.location="/"</script>''')
     except:
         return HttpResponse('''<script>alert("invalid username or password");window.location="/"</script>''')
 
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def Manage_job_veccancy(request):
     ob=company.objects.all()
     return render(request,'company/Mange job veccancy.html', {'val':ob})
@@ -531,38 +531,38 @@ def Manage_job_veccancy(request):
 
 #home
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def verify_application(request):
     ob = app_req.objects.all()
     return render(request, 'company/verify application.html', {'val': ob})
 
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def applicationsearch(request):
     n=request.POST['textfield']
     ob=app_req.objects.filter(date__icontains=n)
     return render(request,'company/verify application.html',{'val':ob, 'n': n})
 
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def acceptapplication(request,id):
     ob=app_req.objects.get(id=id)
     ob.status='Accepetd'
     ob.save()
     return HttpResponse('''<script>alert("accepted successfully ");window.location="/verify_application"</script>''')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def rejectapplication(request,id):
     ob=app_req.objects.get(id=id)
     ob.status='Rejected'
     ob.save()
     return HttpResponse('''<script>alert("rejected successfully ");window.location="/verify_application"</script>''')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def add_tips(request):
     return render(request,'guide/add tips.html')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def addtips(request):
     tip1=  request.POST['textfield2']
     detail = request.POST['textfield3']
@@ -573,19 +573,19 @@ def addtips(request):
     ob.save()
     return HttpResponse('''<script>alert("Added sucessfully");window.location="view_tips"</script>''')
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def view_tips(request):
     ob=tip.objects.filter(GUIDE__LOGIN__id=request.session['lid'])
     return render(request, 'guide/view tips.html',{'val':ob})
 
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def view_Review(request):
     ob =review.objects.all()
     ob1 =company.objects.all()
     return render(request,'guide/view Review.html', {'val':ob,'com':ob1})
 
-@login_required(login_url='/')
+#@login_required(login_url='/')
 def viewReviewsearch(request):
     n=request.POST['textfield']
     ob=review.objects.filter(date__icontains=n)
@@ -873,7 +873,7 @@ def upldcv(request):
     fn=FileSystemStorage()
     fs=fn.save(cv.name,cv)
     lid=request.POST['lid']
-    save_image_path = r'C:\Users\91953\PycharmProjects\mockinterview\media/' + fs
+    save_image_path = r'C:\Users\ansil\Desktop\P\mockinterview\mockinterview\media/' + fs
     resume_text = read_pdf(save_image_path)
     res = predict(resume_text)
     print(res,"=================================================")
@@ -912,7 +912,7 @@ def uploadresume(request):
     timestr = datetime.now().strftime("%Y%m%d-%H%M%S")
     print(timestr)
     a = base64.b64decode(cv)
-    fh = open(r"C:\Users\hp\PycharmProjects\mock_project\media\\" + timestr + ".pdf", "wb")
+    fh = open(r"C:\Users\ansil\Desktop\P\mockinterview\mockinterview\media\\" + timestr + ".pdf", "wb")
     path =timestr + ".pdf"
     fh.write(a)
     fh.close()
@@ -1142,6 +1142,7 @@ def voice(request):
         scrid = request.POST['scid']
         lid = request.POST['lid']
         qid = request.POST['qid']
+        print("Qn ", qid)
         tid = request.POST['tid']
         file = request.FILES['file']
         im = request.FILES['file1']
@@ -1152,7 +1153,8 @@ def voice(request):
         ffl = time.strftime("%Y%m%d_%H%M%S")
         reg = time.strftime("%Y%m%d_%H%M%S")+ ".jpg"
         kk = "pic.jpg"
-        fn.save(os.path.join(r'C:\Users\syamr\Downloads\mockinterview\mockinterview\media\emotion', reg), im)
+        pp=os.path.join(r'C:\Users\ansil\Desktop\P\mockinterview\mockinterview\media\emotion\\', reg)
+        fn.save(os.path.join(r'C:\Users\ansil\Desktop\P\mockinterview\mockinterview\media\emotion\\', reg), im)
         ff = fn.save(file.name,file)
         # ff = secure_filename(file.filename)
         print(ff)
@@ -1161,11 +1163,12 @@ def voice(request):
         # import time
         ffl = time.strftime("%Y%m%d_%H%M%S")
         req = time.strftime("%Y%m%d_%H%M%S") + "." + str(fl[1])
-        fn.save(os.path.join(r'C:\Users\syamr\Downloads\mockinterview\mockinterview\media\audio', req),file)
+        fn.save(os.path.join(r'C:\Users\ansil\Desktop\P\mockinterview\mockinterview\media\audio', req),file)
         # fn.save(req,req)
         print(req, "++++++=====++++====+++")
         print("====ff1=====", ffl)
-        os.system('ffmpeg -i static\\audio\\' + req + ' static\\audio\\' + ffl + ".wav")
+        # os.system('ffmpeg -i static\\audio\\' + req + 'static\\audio\\' + ffl + ".wav")
+        os.system('ffmpeg -i media\\audio\\' + req + ' media\\audio\\' + ffl + ".wav")
         ans = "no answer"
         try:
             ans = silence_based_conversion(ffl)
@@ -1188,14 +1191,15 @@ def voice(request):
             elif len(my_matches) > 10 and len(my_matches) < 20:
                 omark = omark - 0.6
         em = ""
+        em=detect_emotion(pp)
         print("emotion", em)
         qw = answer_details()
         qw.ans=ans
-        qw.emt=em
+        qw.emot=em
         qw.user=User.objects.get(LOGIN__id=lid)
         qw.oans=oans
         qw.date=datetime.today()
-        qw.vac_qn=vac_qn.objects.get(id=qid)
+        qw.vac_qn=q
         qw.save()
         data = {"task": omark}
         r = json.dumps(data)

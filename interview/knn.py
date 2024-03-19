@@ -13,7 +13,7 @@ ps = PorterStemmer()
 #
 # for w in words:
 # 	print(w, " : ", ps.stem(w))
-file = open(r'C:\Users\91953\PycharmProjects\mockinterview\interview\ResumeDataSet.csv',encoding='utf-8')
+file = open(r'C:\Users\ansil\Desktop\P\mockinterview\mockinterview\interview\ResumeDataSet.csv',encoding='utf-8')
 type(file)
 csvreader = csv.reader(file)
 header = []
