@@ -7,7 +7,7 @@
     <td width="244">
 
       <label>
-        <input type="text" name="textfield" />
+        <input type="text" name="textfield" required pattern="[A-Z a-z.]{3,25}"/>
         </label>
     </td>
   </tr>
@@ -15,7 +15,7 @@
     <td>Last name </td>
     <td>
       <label>
-        <input type="text" name="textfield2" />
+        <input type="text" name="textfield2" required pattern="[A-Z a-z.]{1,25}"/>
         </label>
       </td>
   </tr>
@@ -23,7 +23,7 @@
     <td>Address</td>
     <td>
       <label>
-        <textarea name="textarea"></textarea>
+        <textarea name="textarea" required></textarea>
         </label>
       </td>
   </tr>
@@ -31,7 +31,7 @@
     <td>Phone</td>
     <td>
       <label>
-        <input type="text" name="textfield3" />
+        <input type="text" name="textfield3" required pattern="[6789][0-9]{9}"/>
         </label>
       </td>
   </tr>
@@ -39,7 +39,7 @@
     <td>Email</td>
     <td>
       <label>
-        <input type="text" name="textfield4" />
+        <input type="email" name="textfield4" required/>
         </label>
       </td>
   </tr>
@@ -47,7 +47,7 @@
     <td>User name </td>
     <td>
       <label>
-        <input type="text" name="textfield5" />
+        <input type="text" name="textfield5" required pattern="[A-Z a-z.]{3,25}"/>
         </label>
      </td>
   </tr>
@@ -55,7 +55,7 @@
     <td>Password</td>
     <td>
       <label>
-        <input type="password" name="textfield6" />
+        <input type="password" name="textfield6" required/>
         </label>
       </td>
   </tr>

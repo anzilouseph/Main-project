@@ -93,9 +93,8 @@ class vaccancy(models.Model):
 
 class vac_qn(models.Model):
     vaccancy= models.ForeignKey(vaccancy, on_delete=models.CASCADE)
-    Question = models.TextField()
-    Answer = models.CharField(max_length=500)
-
+    Question = models.CharField(max_length=600)
+    Answer = models.CharField(max_length=500)   
 
 class app_req(models.Model):
     date = models.DateField(max_length=60)

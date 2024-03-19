@@ -8,7 +8,7 @@
     <td width="244">
 
       <label>
-        <input type="text" name="textfield" value="{{ val.First_name }}"/>
+        <input type="text" name="textfield" value="{{ val.First_name }}"required pattern="[A-Z a-z.]{3,25}"/>
         </label>
     </td>
   </tr>
@@ -16,7 +16,7 @@
     <td>Last name </td>
     <td>
       <label>
-        <input type="text" name="textfield2" value="{{ val.Last_name }}"/>
+        <input type="text" name="textfield2" value="{{ val.Last_name }}"required pattern="[A-Z a-z.]{1,25}"/>
         </label>
       </td>
   </tr>
@@ -24,7 +24,7 @@
     <td>Address</td>
     <td>
       <label>
-        <textarea name="textarea"> {{ val.Address }}</textarea>
+        <textarea name="textarea" required> {{ val.Address }}</textarea>
         </label>
       </td>
   </tr>
@@ -32,7 +32,7 @@
     <td>Phone</td>
     <td>
       <label>
-        <input type="text" name="textfield3" value="{{ val.Phone }}"/>
+        <input type="text" name="textfield3" value="{{ val.Phone }}" required pattern="[6789][0-9]{9}"/>
         </label>
       </td>
   </tr>
@@ -40,7 +40,7 @@
     <td>Email</td>
     <td>
       <label>
-        <input type="text" name="textfield4"value="{{ val.Email }}"/>
+        <input type="email" name="textfield4"value="{{ val.Email }} " required/>
         </label>
       </td>
   </tr>

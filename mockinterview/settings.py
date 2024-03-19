@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-79o!+%1sdg7$pmc9iv6@w3+g3g)h_+#+-ewniwy&o8&7&^&f#x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -77,7 +77,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mockinter',
-        'PASSWORD':'12345678',
+        'PASSWORD':'',
         'HOST':'localhost',
         'PORT':'3306',
         'USER':'root',

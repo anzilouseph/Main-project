@@ -1,1141 +1,282 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/interview/views.py" description="    .delete()&#10;" line="348" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2300581a-d98c-4ff0-8747-832058c8d034" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/company/companyindex.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/company/edit_job_ veccancy.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/guide/Edit question.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/guide/add guidlines.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/guide/edittest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/guide/guidindex.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/guide/view tips.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/interview/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/interview/migrations/0002_rename_complaint_complaint_table.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/interview/migrations/0003_rename_vaccancy_vaccancy_vaccancy.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/company/add_vacancy.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sql" afterPath="$PROJECT_DIR$/db.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interview/models.py" afterPath="$PROJECT_DIR$/interview/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interview/urls.py" afterPath="$PROJECT_DIR$/interview/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interview/views.py" afterPath="$PROJECT_DIR$/interview/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockinterview/settings.py" afterPath="$PROJECT_DIR$/mockinterview/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockinterview/urls.py" afterPath="$PROJECT_DIR$/mockinterview/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/Manage guide.html" afterPath="$PROJECT_DIR$/templates/admin/Manage guide.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/Verify company.html" afterPath="$PROJECT_DIR$/templates/admin/Verify company.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/View review.html" afterPath="$PROJECT_DIR$/templates/admin/View review.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/addguide.html" afterPath="$PROJECT_DIR$/templates/admin/addguide.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/blockor unblock guide.html" afterPath="$PROJECT_DIR$/templates/admin/blockor unblock guide.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/editguide.html" afterPath="$PROJECT_DIR$/templates/admin/editguide.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/send reply.html" afterPath="$PROJECT_DIR$/templates/admin/send reply.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/view compaint.html" afterPath="$PROJECT_DIR$/templates/admin/view compaint.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/viewuser.html" afterPath="$PROJECT_DIR$/templates/admin/viewuser.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/company/Mange job veccancy.html" afterPath="$PROJECT_DIR$/templates/company/Mange job veccancy.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/company/add job veccancy.html" afterPath="$PROJECT_DIR$/templates/company/add job veccancy.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/company/chat with candidate.html" afterPath="$PROJECT_DIR$/templates/company/chat with candidate.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/company/company home.html" afterPath="$PROJECT_DIR$/templates/company/company home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/company/verify application.html" afterPath="$PROJECT_DIR$/templates/company/verify application.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/guide/Add question.html" afterPath="$PROJECT_DIR$/templates/guide/Add question.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/guide/Guid home.html" afterPath="$PROJECT_DIR$/templates/guide/Guid home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/guide/Send reply.html" afterPath="$PROJECT_DIR$/templates/guide/Send reply.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/guide/add text type.html" afterPath="$PROJECT_DIR$/templates/guide/add text type.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/guide/add tips.html" afterPath="$PROJECT_DIR$/templates/guide/add tips.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/guide/manage question.html" afterPath="$PROJECT_DIR$/templates/guide/manage question.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/guide/manage test type.html" afterPath="$PROJECT_DIR$/templates/guide/manage test type.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/guide/view Review.html" afterPath="$PROJECT_DIR$/templates/guide/view Review.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/guide/view doubt.html" afterPath="$PROJECT_DIR$/templates/guide/view doubt.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/guide/view guid line.html" afterPath="$PROJECT_DIR$/templates/guide/view guid line.html" />
+    <list default="true" id="d701e867-3e1e-42f6-85ad-7ff4cca445d7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/example.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ffmpeg.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interview/ResumeDataSet.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interview/emotion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interview/knn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interview/migrations/0002_alter_vac_qn_question.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interview/sampleee.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interview/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interview/train dataset.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/20230715144418_IMG_0205.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/20240213_150615.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_0n5VQBn.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_23Njygv.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_40HqI4F.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_5wnGqN5.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_78m9imx.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_9slCK1W.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_EIbPr0E.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_G1YO5rv.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_IItfIfD.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_Jz2JqmY.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_LdLYSOD.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_MP4z8mk.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_MR501bx.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_MXPKpaD.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_MgaSKby.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_MwYHGCy.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_Phkwemw.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_QoE4A6l.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_SIcCvfk.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_XFlZpms.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_Xo7Oo9t.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_aMaMo89.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_ahO0PCv.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_dWfODu2.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_guj43Ge.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_hfSQvGt.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_iaBdfEG.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_jppkHYV.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_kGLNcZU.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_qhuY9kj.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_qlI2NPx.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_sJ070dy.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_u7DrA9f.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_ueiA281.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_vVnvt1c.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_wGgD2na.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_xjjSy6B.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/AudioRecording_y7t3TcT.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/IMG-20240210-WA0033.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/IMG-20240225-WA0067.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/My_Bharat_Registration_Certificate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/My_Bharat_Registration_Certificate_7g41IL1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/My_Bharat_Registration_Certificate_HK7Qew8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/My_Bharat_Registration_Certificate_I6IVd8c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/My_Bharat_Registration_Certificate_PFcqobx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/My_Bharat_Registration_Certificate_SH95QzY.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/My_Bharat_Registration_Certificate_hHO8J0g.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/My_Bharat_Registration_Certificate_iD6TQRL.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/My_Bharat_Registration_Certificate_j0h9GZ4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/My_Bharat_Registration_Certificate_jkpy20Y.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/My_Bharat_Registration_Certificate_twOakx4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/My_Bharat_Registration_Certificate_yYdQphC.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront_.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__1DTI1WS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__2UUedXE.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__4ivRTAf.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__5WXPrhm.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__6Na1WgU.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__7mFjeyK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__8Ck6Ffu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__9pvikBq.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__C0XiieO.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__ElNYcX3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__IbliwRp.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__L8IDh2e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__NTyJyv6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__NaJLLkz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__SZcnKYd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__Sd5SLso.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__SkOlgNQ.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__XFNnQcN.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__YMUlTeO.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__c72G4mR.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__dOwbu3h.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__gB4c36G.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__hsuMTwR.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__mECMBwu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__oRf72HQ.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__owEkTTv.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__ps4Yze0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__rAORb6Z.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__rVuZemZ.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__tEIvGqj.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__teXcR5C.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__udn0Qi1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__vz3VXP8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__xS8PEvc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__y8DKCMn.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__yfpHW4e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PictureFront__zlfhKGD.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/Screenshot_20240220-125939.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/Screenshot_20240220-125939_x7AwXbo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/VYSHNAV.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/_var_www_cuetpg2024_runtime_CUETPGApplicationForm-243510327069.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/_var_www_cuetpg2024_runtime_CUETPGApplicationForm-243510327069_5GWjySA.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/audio/20240226_214345.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/audio/20240226_214352.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/audio/20240226_214401.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/audio/20240226_223544.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/audio/20240226_223748.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/audio/20240311_001538.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/audio/20240311_001546.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/audio/20240311_001553.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/audio/20240311_001601.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/audio/20240311_002235.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/audio/20240311_002241.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/audio/20240311_002248.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/audio/20240311_002255.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/audio/20240311_002628.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/audio/20240311_003027.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/audio/20240311_003033.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/audio/20240311_003038.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/audio/20240311_003044.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/audio/20240311_003058.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/audio/20240311_003103.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/audio/20240311_003108.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/audio/20240311_003115.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240226_120314.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240226_120400.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240226_120400.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240226_211813.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240226_211813.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240226_211823.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240226_211823.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240226_211831.3gp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240226_211831.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240226_214229.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240226_214345.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240226_214352.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240226_214401.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240226_223544.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240226_223748.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240311_001538.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240311_001546.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240311_001553.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240311_001601.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240311_002235.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240311_002241.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240311_002248.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240311_002255.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240311_002628.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240311_003027.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240311_003033.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240311_003038.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240311_003044.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240311_003058.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240311_003103.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240311_003108.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/emotion/20240311_003115.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/resume.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/resume_9EgOhUB.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/resume_Gr1VVyv.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/resume_QWOF2x1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/resume_h3iYDhm.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/model/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/model/facenet_model.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/model/facial_expression_model_structure.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/model/facial_expression_model_weights.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/model/fer_keras_model_from_autokeras.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/model/haarcascade_frontalface_default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/model/inception_resnet_v1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/model/inceptionv3_model.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/company/add_vac_qstion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mockinterview.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mockinterview.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/nwdb.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interview/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/interview/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interview/migrations/0002_auto_20240110_1302.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/interview/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/interview/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interview/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/interview/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interview/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/interview/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mockinterview/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mockinterview/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/Manage guide.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/Manage guide.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/Verify company.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/Verify company.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/View review.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/View review.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/addguide.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/addguide.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/admi login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/admi login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/editguide.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/editguide.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/send reply.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/send reply.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/viewuser.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/viewuser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/company register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/company register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/company/Mange job veccancy.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/company/Mange job veccancy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/company/add job veccancy.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/company/add job veccancy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/company/companyindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/company/companyindex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/company/edit_job_ veccancy.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/company/edit_job_ veccancy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/company/verify application.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/company/verify application.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/guide/Add question.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/guide/Add question.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/guide/Edit question.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/guide/Edit question.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/guide/Send reply.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/guide/Send reply.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/guide/add guidlines.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/guide/add guidlines.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/guide/add text type.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/guide/add text type.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/guide/add tips.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/guide/add tips.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/guide/edittest.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/guide/edittest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/guide/guidindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/guide/guidindex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/guide/manage question.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/guide/manage question.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/guide/manage test type.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/guide/manage test type.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/guide/view Review.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/guide/view Review.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/guide/view doubt.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/guide/view doubt.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/guide/view guid line.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/guide/view guid line.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/interview/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="203" column="84" lean-forward="false" selection-start-line="203" selection-start-column="84" selection-end-line="203" selection-end-column="84" />
-              <folding>
-                <element signature="e#0#29#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1722">
-              <caret line="82" column="98" lean-forward="false" selection-start-line="82" selection-start-column="98" selection-end-line="82" selection-end-column="98" />
-              <folding>
-                <marker date="1705481891341" expanded="false" signature="4175:4181" ph="©" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="company register.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/company register.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="777">
-              <caret line="37" column="43" lean-forward="false" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view doubt.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/guide/view doubt.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Verify company.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/admin/Verify company.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" column="94" lean-forward="false" selection-start-line="17" selection-start-column="94" selection-end-line="17" selection-end-column="94" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view compaint.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/admin/view compaint.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="26" column="59" lean-forward="false" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="View review.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/admin/View review.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="16" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/admin/admin home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interview/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="22" column="34" lean-forward="false" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add tips.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/guide/add tips.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-        <option value="HTML File" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>manage_question</find>
-      <find>edit_Question</find>
-      <find>add</find>
-      <find>addtips</find>
-      <find>viewReviewsearch</find>
-      <find>log</find>
-      <find>tip</find>
-      <find>login</find>
-      <find>view</find>
-      <find>add_tips</find>
-      <find>add_te</find>
-      <find>view_gui</find>
-      <find>view_guid_line(</find>
-      <find>view_guid_line</find>
-      <find>GUIDE</find>
-      <find>doub</find>
-      <find>view_doubt</find>
-      <find>doubtreply</find>
-      <find>viewreviewsearch</find>
-      <find>verify_application</find>
-      <find>applicationsearch</find>
-      <find>css</find>
-      <find>assets</find>
-      <find>assets/js/main.js</find>
-      <find>company home.html</find>
-      <find>manageguidesearch</find>
-      <find>addguide.html</find>
-      <find>guid</find>
-      <find>delete_Question</find>
-      <find>company register.html</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/interview/__init__.py" />
-        <option value="$PROJECT_DIR$/templates/admin/admi login.html" />
-        <option value="$PROJECT_DIR$/templates/company register.html" />
-        <option value="$PROJECT_DIR$/templates/admin/admin home.html" />
-        <option value="$PROJECT_DIR$/templates/admin/admin_nav.html" />
-        <option value="$PROJECT_DIR$/interview/form.py" />
-        <option value="$PROJECT_DIR$/interview/VacancyForm.py" />
-        <option value="$PROJECT_DIR$/templates/company/add_vacancy.html" />
-        <option value="$PROJECT_DIR$/mockinterview/urls.py" />
-        <option value="$PROJECT_DIR$/templates/company/fur_chat.html" />
-        <option value="$PROJECT_DIR$/templates/guide/add tips form.html" />
-        <option value="$PROJECT_DIR$/templates/guide/Guid home.html" />
-        <option value="$PROJECT_DIR$/interview/models.py" />
-        <option value="$PROJECT_DIR$/mockinterview/settings.py" />
-        <option value="$PROJECT_DIR$/templates/admin/viewuser.html" />
-        <option value="$PROJECT_DIR$/templates/admin/blockor unblock guide.html" />
-        <option value="$PROJECT_DIR$/templates/admin/view compaint.html" />
-        <option value="$PROJECT_DIR$/templates/admin/Verify company.html" />
-        <option value="$PROJECT_DIR$/templates/admin/View review.html" />
-        <option value="$PROJECT_DIR$/templates/admin/index.html" />
-        <option value="$PROJECT_DIR$/templates/admin/Manage guide.html" />
-        <option value="$PROJECT_DIR$/templates/admin/send reply.html" />
-        <option value="$PROJECT_DIR$/templates/admin/addguide.html" />
-        <option value="$PROJECT_DIR$/templates/admin/editguide.html" />
-        <option value="$PROJECT_DIR$/templates/company/companyindex.html" />
-        <option value="$PROJECT_DIR$/templates/company/company home.html" />
-        <option value="$PROJECT_DIR$/templates/guide/guidindex.html" />
-        <option value="$PROJECT_DIR$/templates/company/chat with candidate.html" />
-        <option value="$PROJECT_DIR$/templates/company/Mange job veccancy.html" />
-        <option value="$PROJECT_DIR$/templates/company/edit_job_ veccancy.html" />
-        <option value="$PROJECT_DIR$/templates/company/add job veccancy.html" />
-        <option value="$PROJECT_DIR$/templates/company/verify application.html" />
-        <option value="$PROJECT_DIR$/templates/guide/add guidlines.html" />
-        <option value="$PROJECT_DIR$/templates/guide/Edit question.html" />
-        <option value="$PROJECT_DIR$/templates/guide/manage test type.html" />
-        <option value="$PROJECT_DIR$/templates/guide/Send reply.html" />
-        <option value="$PROJECT_DIR$/templates/guide/view guid line.html" />
-        <option value="$PROJECT_DIR$/templates/guide/view Review.html" />
-        <option value="$PROJECT_DIR$/templates/guide/add text type.html" />
-        <option value="$PROJECT_DIR$/templates/guide/edittest.html" />
-        <option value="$PROJECT_DIR$/templates/guide/Add question.html" />
-        <option value="$PROJECT_DIR$/templates/guide/manage question.html" />
-        <option value="$PROJECT_DIR$/templates/guide/view tips.html" />
-        <option value="$PROJECT_DIR$/templates/guide/add tips.html" />
-        <option value="$PROJECT_DIR$/templates/guide/view doubt.html" />
-        <option value="$PROJECT_DIR$/interview/urls.py" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/interview/views.py" />
-      </list>
-    </option>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1038" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mockinterview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mockinterview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mockinterview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mockinterview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mockinterview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mockinterview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="guide" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mockinterview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mockinterview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="company" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mockinterview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mockinterview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mockinterview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mockinterview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mockinterview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mockinterview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mockinterview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mockinterview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mockinterview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mockinterview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mockinterview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mockinterview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mockinterview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
-    </panes>
+  <component name="ProjectId" id="2dfR5kdUp0y4JrPn32aCjsmY16L" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\91953\PycharmProjects\mockinterview\templates\guide" />
-      <recent name="C:\Users\91953\PycharmProjects\mockinterview\templates\admin" />
-      <recent name="C:\Users\91953\PycharmProjects\mockinterview\static" />
-      <recent name="C:\Users\91953\PycharmProjects\mockinterview\templates" />
-      <recent name="C:\Users\91953\PycharmProjects\mockinterview\static\login" />
+      <recent name="C:\Users\ansil\Desktop\P\mockinterview\mockinterview" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Django server.mockinterview">
-    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+  <component name="RunManager">
+    <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="mockinterview" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Python36\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="mockinterview" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="TARGET" value="" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
-      <node-interpreter value="project" />
-      <working-dir value="" />
-      <envs />
-      <scope-kind value="ALL" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="mockinterview" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="mockinterview" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="mockinterview" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="mockinterview" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
-      <method />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <module name="mockinterview" />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run" />
-      <scripts />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="mockinterview" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="mockinterview" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;.&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method />
-    </configuration>
-    <configuration default="false" name="mockinterview" type="Python.DjangoServer" factoryName="Django server" singleton="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="DJANGO_SETTINGS_MODULE" value="mockinterview.settings" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\91953\AppData\Local\Programs\Python\Python36\python.exe" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="mockinterview" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
-      <method />
-    </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Django server.mockinterview" />
-    </list>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
-  </component>
-  <component name="StructureViewFactory">
-    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2300581a-d98c-4ff0-8747-832058c8d034" name="Default" comment="" />
-      <created>1695971636672</created>
+      <changelist id="d701e867-3e1e-42f6-85ad-7ff4cca445d7" name="Changes" comment="" />
+      <created>1710396965558</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1695971636672</updated>
+      <updated>1710396965558</updated>
     </task>
     <servers />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1038" extended-state="0" />
-    <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28464016" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15922108" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="29" y="395" width="1862" height="230" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964131" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10767469" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="29" y="395" width="1862" height="230" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2803437" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964131" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/interview/views.py</url>
-          <line>343</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/interview/views.py</url>
-          <line>348</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/interview/views.py</url>
-          <line>432</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/interview/views.py</url>
-          <line>318</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="19" />
-    </breakpoint-manager>
-    <watches-manager />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/chat_style/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-693">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/guide/editguide.html" />
-    <entry file="file://$PROJECT_DIR$/templates/guide/add tips form.html" />
-    <entry file="file://$PROJECT_DIR$/mockinterview/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/login/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mockinterview/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="127" column="14" lean-forward="false" selection-start-line="127" selection-start-column="14" selection-end-line="127" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/forms/Readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/assets/img/slide/slide-2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/assets/img/slide/slide-3.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/assets/img/slide/slide-1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/admi login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-210">
-          <caret line="8" column="54" lean-forward="false" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/blockor unblock guide.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="33" column="11" lean-forward="true" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/editguide.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="47" column="19" lean-forward="false" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/send reply.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/addguide.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="61" column="19" lean-forward="false" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/company/fur_chat.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9387">
-          <caret line="450" column="0" lean-forward="true" selection-start-line="450" selection-start-column="0" selection-end-line="450" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="79" column="13" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="883" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interview/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1281">
-          <caret line="61" column="4" lean-forward="false" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/guide/guidindex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="52" column="74" lean-forward="false" selection-start-line="52" selection-start-column="74" selection-end-line="52" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/viewuser.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="62" lean-forward="true" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/Manage guide.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="39" column="51" lean-forward="false" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/company/edit_job_ veccancy.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/company/companyindex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1082">
-          <caret line="152" column="0" lean-forward="false" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/company/company home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="33" lean-forward="false" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/company/verify application.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/company/chat with candidate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/guide/Guid home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="49" lean-forward="false" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/company/Mange job veccancy.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="70" lean-forward="false" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/company/add job veccancy.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/resources/html5-schema/html5/common.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="124" column="18" lean-forward="false" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/guide/add guidlines.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="55" lean-forward="false" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/guide/Edit question.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="55" lean-forward="false" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/guide/Send reply.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="67" lean-forward="false" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/guide/view guid line.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="57" lean-forward="false" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/guide/view Review.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="55" lean-forward="false" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/guide/add text type.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/guide/edittest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/guide/manage test type.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="68" lean-forward="false" selection-start-line="3" selection-start-column="68" selection-end-line="3" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/guide/Add question.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/guide/manage question.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="39" column="21" lean-forward="false" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/guide/view tips.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/guide/add tips.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/guide/view doubt.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/Verify company.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="94" lean-forward="false" selection-start-line="17" selection-start-column="94" selection-end-line="17" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/view compaint.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="26" column="59" lean-forward="false" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/View review.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="16" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/admin home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interview/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="22" column="34" lean-forward="false" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/company register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="777">
-          <caret line="37" column="43" lean-forward="false" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1722">
-          <caret line="82" column="98" lean-forward="false" selection-start-line="82" selection-start-column="98" selection-end-line="82" selection-end-column="98" />
-          <folding>
-            <marker date="1705481891341" expanded="false" signature="4175:4181" ph="©" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interview/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="203" column="84" lean-forward="false" selection-start-line="203" selection-start-column="84" selection-end-line="203" selection-end-column="84" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

@@ -8,10 +8,10 @@
         <label>
         <select name="select">
             {% for i in tst %}
-                <option value="{{ i.id }}">{{i.Exam_name}}</option>
+                <option value="{{ i.id }}" {% if i.id == n %} selected{% endif %}>{{i.Exam_name}}</option>
             {% endfor %}
         </select>
-        <input type="submit" name="Submit" value="search " class="btn btn-success" />
+        <input type="submit" name="Submit" value="search " class="btn btn-success" required/>
       </label></td>
       <td width="21">&nbsp;</td>
     </tr>
