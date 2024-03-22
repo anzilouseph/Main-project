@@ -1,0 +1,18 @@
+{% extends 'company/companyindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table border="1" class="table table-dark">
+
+    <tr>
+      <td>Date</td>
+      <td>Emotion</td>
+    </tr>
+      {% for i in val %}
+    <tr>
+      <td>{{i.date}}</td>
+      <td>{{ i.emot }}</td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

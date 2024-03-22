@@ -56,6 +56,7 @@ urlpatterns=[
     path('edit_job/<int:id>', views.edit_job, name='edit_job'),
     path('edit_veccancy', views.edit_veccancy, name='edit_veccancy'),
     path('delete_vaccancy/<int:id>', views.delete_vaccancy, name='delete_vaccancy'),
+    path('emotion_logs/<int:id>', views.emotion_logs, name='emotion_logs'),
     path('Guid_home', views.Guid_home, name='Guid_home'),
     path('manage_question', views.manage_question, name='manage_question'),
     path('manage_test_type', views.manage_test_type, name='manage_test_type'),
@@ -111,5 +112,6 @@ path('test_result1', views.test_result1, name='test_result1'),
     path('view_test', views.view_test, name='view_test'),
     path('view_tips1', views.view_tips1, name='view_tips1'),
     path('test_result1', views.test_result1, name='test_result1'),
+    path('send_req', views.send_req, name='send_req'),
 
 ]

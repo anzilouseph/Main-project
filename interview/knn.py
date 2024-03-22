@@ -127,6 +127,8 @@ print(cm)
 print("\nCR by library method=\n",
       classification_report(y_test, y))
 
+
+
 def predict(txt):
 
     checkwd=[]

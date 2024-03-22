@@ -2,6 +2,8 @@ import json
 import math
 import os
 from datetime import datetime
+
+import requests
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 from django.core.files.storage import FileSystemStorage
@@ -317,7 +319,7 @@ def block_guide(request,id):
 #@login_required(login_url='/')
 def unblock_guide(request,id):
     ob=Login.objects.get(id=id)
-    ob.type='user'
+    ob.type='guide'
     ob.save()
     return HttpResponse('''<script>alert("unblocked successfully ");window.location="/block_or_unblock"</script>''')
 
@@ -528,6 +530,24 @@ def Manage_job_veccancy(request):
     return render(request,'company/Mange job veccancy.html', {'val':ob})
 
 
+def send_req(request):
+    vid=request.POST['vid']
+    lid=request.POST['lid']
+    res=app_req.objects.filter(vaccancy_id=vid, USER=User.objects.get(LOGIN_id=lid))
+    if res.exists():
+        data = {"task": "invalid"}
+        r = json.dumps(data)
+        return HttpResponse(r)
+    else:
+        obj=app_req()
+        obj.date=datetime.now().date()
+        obj.status="pending"
+        obj.vaccancy_id=vid
+        obj.USER=User.objects.get(LOGIN_id=lid)
+        obj.save()
+        data = {"task": "success"}
+        r = json.dumps(data)
+        return HttpResponse(r)
 
 #home
 
@@ -536,6 +556,11 @@ def verify_application(request):
     ob = app_req.objects.all()
     return render(request, 'company/verify application.html', {'val': ob})
 
+def emotion_logs(request, id):
+    re=app_req.objects.get(id=id)
+    vid=re.vaccancy.id
+    ob=answer_details.objects.filter(vac_qn__vaccancy_id=vid)
+    return render(request, 'company/emotion_logs.html', {'val': ob})
 
 #@login_required(login_url='/')
 def applicationsearch(request):
@@ -761,7 +786,6 @@ def login2(request):
     else:
         data={"task":"success",'id':str(ob.id)}
     r=json.dumps(data)
-    print(r)
     return HttpResponse(r)
 
 def Userregistration(request):
@@ -867,7 +891,7 @@ def read_pdf(file_path):
             txt=txt+text+" "
         return txt
 def upldcv(request):
-    from knn import predict
+    from .knn import predict
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         # from interview.sampleee import pdf_reader
     cv=request.FILES['file']
     fn=FileSystemStorage()
@@ -982,16 +1006,18 @@ def career_prediction(request):
     ob=vaccancy.objects.filter(job__icontains=job)
     data = []
     for i in ob:
-        row = {"cmp": i.COMPANY.name,"job":i.job,"vac":i.Vaccancy,"qual":i.qualification,"sal":i.salary,"det":i.details,"vid":i}
+        row = {"cmp": i.COMPANY.name,"job":i.job,"vac":i.Vaccancy,"qual":i.qualification,"sal":i.salary,"det":i.details,"vid":i.id}
         data.append(row)
     r = json.dumps(data)
     print(r)
     return HttpResponse(r)
 def mocktest(request):
+    lid=request.POST['lid']
     ob=vaccancy.objects.all()
+    ob1=app_req.objects.filter(USER__LOGIN_id=lid,status='Accepetd')
     data = []
-    for i in ob:
-        row = {"cmp": i.COMPANY.name,"job":i.job,"vac":i.Vaccancy,"qual":i.qualification,"sal":i.salary,"det":i.details,"cid":i.id,"vid":i.pk}
+    for i in ob1:
+        row = {"cmp": i.vaccancy.COMPANY.name,"job":i.vaccancy.job,"vac":i.vaccancy.Vaccancy,"qual":i.vaccancy.qualification,"sal":i.vaccancy.salary,"det":i.vaccancy.details,"cid":i.vaccancy.id,"vid":i.vaccancy.pk}
         data.append(row)
     r = json.dumps(data)
     print(r)
@@ -1142,6 +1168,7 @@ def voice(request):
         scrid = request.POST['scid']
         lid = request.POST['lid']
         qid = request.POST['qid']
+        print("Qn ", qid)
         tid = request.POST['tid']
         file = request.FILES['file']
         im = request.FILES['file1']
@@ -1166,7 +1193,8 @@ def voice(request):
         # fn.save(req,req)
         print(req, "++++++=====++++====+++")
         print("====ff1=====", ffl)
-        os.system('ffmpeg -i static\\audio\\' + req + 'static\\audio\\' + ffl + ".wav")
+        # os.system('ffmpeg -i static\\audio\\' + req + 'static\\audio\\' + ffl + ".wav")
+        os.system('ffmpeg -i media\\audio\\' + req + ' media\\audio\\' + ffl + ".wav")
         ans = "no answer"
         try:
             ans = silence_based_conversion(ffl)
@@ -1193,24 +1221,26 @@ def voice(request):
         print("emotion", em)
         qw = answer_details()
         qw.ans=ans
-        qw.emt=em
+        qw.emot=em
         qw.user=User.objects.get(LOGIN__id=lid)
         qw.oans=oans
         qw.date=datetime.today()
-        qw.vac_qn=vac_qn.objects.get(id=qid)
+        qw.vac_qn=q
         qw.save()
         data = {"task": omark}
         r = json.dumps(data)
         return HttpResponse(r)
 
 def silence_based_conversion(fl):
-    path = r'./static/audio/'+fl+'.wav'
+    path = r'C:/Users/ansil/Desktop/P/mockinterview/mockinterview/media/audio/'+fl+'.wav'
+    print(path)
     r = sr.Recognizer()
     file=path
     # recognize the chunk
     with sr.AudioFile(file) as source:
         r.adjust_for_ambient_noise(source)
         audio_listened = r.listen(source)
+
     try:
         rec = r.recognize_google(audio_listened)
         print(rec)
