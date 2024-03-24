@@ -13,14 +13,14 @@ ps = PorterStemmer()
 #
 # for w in words:
 # 	print(w, " : ", ps.stem(w))
-file = open(r'C:\Users\ansil\Desktop\P\mockinterview\mockinterview\interview\ResumeDataSet.csv',encoding='utf-8')
+file = open(r'C:\MOCK\web\mockinterview\mockinterview\interview\skill.csv',encoding='utf-8')
 type(file)
 csvreader = csv.reader(file)
 header = []
 header = next(csvreader)
 #print(header)
 result_row=[]
-num=['0','1','2','3','4','5','6','7','8','9']
+num=['0','1','2','3','4','5','6','7','8','9','10']
 rows = []
 i=0
 for row in csvreader:
